@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+body {
+  @apply dark:bg-zinc-950 dark:text-zinc-50;
+}
