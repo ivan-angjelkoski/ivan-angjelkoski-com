@@ -59,14 +59,14 @@ const navLinks = [
     <div class="mx-auto min-h-screen w-full max-w-6xl px-6 pb-20 pt-8 md:px-10">
       <header class="sticky top-4 z-20 mb-14">
         <nav
-          class="mx-auto flex w-fit items-center gap-2 rounded-full border border-zinc-800/90 bg-zinc-900/80 px-3 py-2 shadow-lg shadow-black/30 backdrop-blur"
+          class="mx-auto flex w-full max-w-2xl flex-wrap items-center justify-center gap-1 rounded-3xl border border-zinc-800/90 bg-zinc-900/80 px-2 py-2 shadow-lg shadow-black/30 backdrop-blur sm:w-fit sm:rounded-full sm:px-3"
           aria-label="Page sections"
         >
           <a
             v-for="link in navLinks"
             :key="link.href"
             :href="link.href"
-            class="rounded-full px-3 py-1.5 text-sm text-zinc-300 transition hover:bg-zinc-800 hover:text-zinc-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300"
+            class="rounded-full px-2.5 py-1.5 text-xs text-zinc-300 transition hover:bg-zinc-800 hover:text-zinc-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 sm:px-3 sm:text-sm"
           >
             {{ link.label }}
           </a>
