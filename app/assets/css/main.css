@@ -1,5 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 
 body {
-  @apply bg-stone-50 text-stone-900 antialiased;
+  font-family: "Space Grotesk", "Share Tech Mono", system-ui, sans-serif;
+  @apply bg-[#050507] text-slate-100 antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Share Tech Mono", "Space Grotesk", system-ui, sans-serif;
+}
+
+::selection {
+  background: rgba(255, 108, 0, 0.35);
+  color: #fff;
 }
