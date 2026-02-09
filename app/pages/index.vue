@@ -52,36 +52,26 @@ const navLinks = [
 </script>
 
 <template>
-  <div class="relative overflow-hidden bg-[#12060d] text-rose-50">
-    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(248,113,113,0.2),_transparent_55%)]" />
-    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom,_rgba(244,63,94,0.18),_transparent_50%)]" />
-    <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,_rgba(255,255,255,0.08)_1px,_transparent_1px),linear-gradient(to_bottom,_rgba(255,255,255,0.08)_1px,_transparent_1px)] bg-[size:140px_140px] opacity-15" />
-    <div class="pointer-events-none absolute -left-24 top-10 h-64 w-64 rounded-full bg-rose-400/30 blur-[150px]" />
-    <div class="pointer-events-none absolute -right-32 top-72 h-72 w-72 rounded-full bg-pink-400/30 blur-[170px]" />
-    <div class="pointer-events-none absolute left-1/2 top-24 flex -translate-x-1/2 gap-8 text-5xl text-rose-300/60">
-      <span>❤</span>
-      <span>♡</span>
-      <span>❤</span>
-    </div>
+  <div class="relative overflow-hidden bg-white text-slate-800">
+    <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-slate-50 to-white" />
 
     <div class="relative mx-auto min-h-screen w-full max-w-6xl px-6 pb-24 pt-8 md:px-10">
-      <header class="sticky top-4 z-20 mb-14">
+      <header class="sticky top-0 z-20 mb-14 bg-white/80 backdrop-blur">
         <nav
-          class="mx-auto flex w-full flex-wrap items-center justify-between gap-3 rounded-2xl border border-white/10 bg-rose-950/70 px-4 py-3 shadow-[0_0_24px_rgba(248,113,113,0.25)] backdrop-blur sm:w-fit"
+          class="mx-auto flex w-full flex-wrap items-center justify-between gap-3 border-b border-slate-200 pb-4 md:w-fit md:border-0 md:pb-0"
           aria-label="Page sections"
         >
-          <div class="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.3em] text-rose-200">
-            <span class="text-pink-300">&lt;love/&gt;</span>
-            <span class="hidden sm:inline">Ivan</span>
+          <div class="flex items-center gap-2 text-sm font-semibold text-slate-900">
+            <span class="text-blue-600">Ivan Angjelkoski</span>
           </div>
-          <div class="flex flex-wrap items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-rose-100/80">
+          <div class="flex flex-wrap items-center gap-4 text-sm text-slate-600">
             <a
-              v-for="(link, index) in navLinks"
+              v-for="link in navLinks"
               :key="link.href"
               :href="link.href"
-              class="rounded-full border border-transparent px-3 py-1 transition hover:border-rose-300/60 hover:text-rose-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-300"
+              class="transition hover:text-blue-600 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
             >
-              {{ String(index + 1).padStart(2, "0") }} // {{ link.label }}
+              {{ link.label }}
             </a>
           </div>
         </nav>
@@ -89,21 +79,21 @@ const navLinks = [
 
       <section
         id="about"
-        class="grid items-center gap-10 rounded-3xl border border-white/10 bg-rose-950/70 p-8 shadow-[0_0_35px_rgba(244,63,94,0.18)] backdrop-blur md:grid-cols-[1.2fr_1fr] md:p-12"
+        class="grid items-center gap-10 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm md:grid-cols-[1.2fr_1fr] md:p-12"
       >
         <div class="space-y-6">
           <div class="flex flex-wrap items-center gap-3">
-            <span class="rounded-full border border-rose-400/50 bg-rose-400/10 px-4 py-1 text-xs uppercase tracking-[0.3em] text-rose-200">
-              System Status: Smitten
+            <span class="rounded-full border border-blue-600/30 bg-blue-50 px-4 py-1.5 text-xs font-medium uppercase tracking-wider text-blue-700">
+              Available for Projects
             </span>
-            <span class="rounded-full border border-pink-400/50 bg-pink-400/10 px-4 py-1 text-xs uppercase tracking-[0.3em] text-pink-200">
-              Frontend Dev
+            <span class="rounded-full border border-slate-300 bg-slate-50 px-4 py-1.5 text-xs font-medium uppercase tracking-wider text-slate-600">
+              Frontend Developer
             </span>
           </div>
-          <h1 class="text-4xl font-semibold leading-tight text-white md:text-6xl">
-            Hello Love — I am <span class="text-rose-300">Ivan_Dev</span>
+          <h1 class="text-4xl font-bold leading-tight text-slate-900 md:text-5xl">
+            I build modern web applications
           </h1>
-          <p class="max-w-2xl text-base leading-relaxed text-rose-100/80 md:text-lg">
+          <p class="max-w-2xl text-lg leading-relaxed text-slate-600">
             I am a Frontend Developer at Injective Labs, focused on building polished,
             high-performance product experiences for modern web and Web3 users. I have spent
             3 years shipping frontend features and interfaces for crypto-native products, and I am
@@ -112,57 +102,56 @@ const navLinks = [
           <div class="flex flex-wrap gap-3">
             <a
               href="#projects"
-              class="rounded-full border border-rose-400/60 bg-rose-400/20 px-6 py-2.5 text-sm font-semibold uppercase tracking-[0.2em] text-rose-100 transition hover:-translate-y-0.5 hover:bg-rose-400/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-300"
+              class="rounded-lg border border-blue-600 bg-blue-600 px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
             >
               View Projects
             </a>
             <a
               href="#contact"
-              class="rounded-full border border-pink-300/60 bg-pink-300/10 px-6 py-2.5 text-sm font-semibold uppercase tracking-[0.2em] text-pink-100 transition hover:-translate-y-0.5 hover:bg-pink-300/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-200"
+              class="rounded-lg border border-slate-300 bg-white px-6 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:border-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
             >
-              Initiate Contact
+              Get in Touch
             </a>
           </div>
         </div>
 
-        <div class="relative mx-auto w-full max-w-sm rounded-3xl border border-rose-400/40 bg-rose-950/70 p-6 shadow-[0_0_30px_rgba(244,63,94,0.25)]">
-          <div class="flex items-center justify-between text-xs uppercase tracking-[0.3em] text-rose-200">
-            <span>root@portfolio:~</span>
-            <span class="text-pink-200">zsh</span>
+        <div class="relative mx-auto w-full max-w-sm rounded-2xl border border-slate-200 bg-slate-50 p-6">
+          <div class="flex items-center justify-between text-xs font-medium uppercase tracking-wider text-slate-500">
+            <span>Quick Profile</span>
+            <span class="text-blue-600">Details</span>
           </div>
-          <div class="mt-4 space-y-3 text-sm text-rose-100/80">
-            <p><span class="text-pink-200">&gt; initializing core...</span></p>
-            <p><span class="text-rose-200">&gt; loading modules: [HTML, CSS, JS]</span></p>
-            <p><span class="text-rose-200">&gt; connecting to database...</span></p>
-            <p><span class="text-rose-300">&gt; success.</span></p>
+          <div class="mt-6 space-y-3 text-sm text-slate-600">
+            <p><strong class="text-slate-900">Name:</strong> Ivan Angjelkoski</p>
+            <p><strong class="text-slate-900">Location:</strong> North Macedonia</p>
+            <p><strong class="text-slate-900">Experience:</strong> 3+ Years</p>
+            <p><strong class="text-slate-900">Role:</strong> Frontend Developer</p>
           </div>
-          <div v-pre class="mt-5 rounded-2xl border border-white/10 bg-rose-950/80 p-4 text-xs text-rose-50/90">
-            <p>const developer = {{</p>
-            <p class="ml-4">name: "Ivan Angjelkoski",</p>
-            <p class="ml-4">location: "North Macedonia",</p>
-            <p class="ml-4">coffeeLevel: "Sweet",</p>
-            <p class="ml-4">skills: ["React", "Nuxt", "Web3"],</p>
-            <p>}};</p>
+          <div class="mt-6 rounded-xl border border-slate-200 bg-white p-4 text-xs text-slate-600">
+            <p class="font-semibold text-slate-900 mb-2">Core Technologies</p>
+            <p class="ml-4">• React / Next.js</p>
+            <p class="ml-4">• Vue / Nuxt</p>
+            <p class="ml-4">• TypeScript</p>
+            <p class="ml-4">• Web3 / Cosmos</p>
           </div>
           <div class="mt-6 flex items-center gap-4">
-            <div class="h-16 w-16 overflow-hidden rounded-2xl border border-pink-300/50">
+            <div class="h-16 w-16 overflow-hidden rounded-xl border border-slate-300 bg-slate-200">
               <img
                 src="/ivan_angjelkoski.jpeg"
                 alt="Portrait of Ivan Angjelkoski"
                 class="h-full w-full object-cover object-top"
               >
             </div>
-            <div class="text-xs text-rose-100/80">
-              <p class="uppercase tracking-[0.3em] text-pink-200">Identity Verified</p>
-              <p class="text-sm text-white">Frontend Developer</p>
+            <div>
+              <p class="text-sm font-semibold text-slate-900">Ivan Angjelkoski</p>
+              <p class="text-xs text-slate-600">Frontend Developer</p>
             </div>
           </div>
         </div>
       </section>
 
       <section id="skills" class="mt-16 space-y-6">
-        <h2 class="text-2xl font-semibold text-white md:text-3xl">Skills & Technologies</h2>
-        <p class="max-w-3xl text-rose-100/80">
+        <h2 class="text-2xl font-bold text-slate-900 md:text-3xl">Skills & Technologies</h2>
+        <p class="max-w-3xl text-slate-600">
           A practical frontend toolkit for building robust web apps, full-stack services, and
           blockchain-integrated products.
         </p>
@@ -170,7 +159,7 @@ const navLinks = [
           <span
             v-for="skill in skills"
             :key="skill"
-            class="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium uppercase tracking-[0.2em] text-rose-100 shadow-[0_0_18px_rgba(244,63,94,0.2)]"
+            class="rounded-lg border border-slate-300 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700"
           >
             {{ skill }}
           </span>
@@ -178,13 +167,13 @@ const navLinks = [
       </section>
 
       <section id="experience" class="mt-16 space-y-6">
-        <h2 class="text-2xl font-semibold text-white md:text-3xl">Experience</h2>
-        <article class="rounded-3xl border border-white/10 bg-rose-950/70 p-7 shadow-[0_0_30px_rgba(244,63,94,0.18)] transition duration-300 hover:-translate-y-1 hover:border-rose-300/60">
+        <h2 class="text-2xl font-bold text-slate-900 md:text-3xl">Experience</h2>
+        <article class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:shadow-md">
           <div class="flex flex-wrap items-baseline justify-between gap-3">
-            <h3 class="text-xl font-semibold text-white">Injective Labs — Frontend Developer</h3>
-            <p class="text-sm font-medium uppercase tracking-[0.3em] text-rose-200">2022 — Present · 3 years</p>
+            <h3 class="text-xl font-semibold text-slate-900">Injective Labs — Frontend Developer</h3>
+            <p class="text-sm font-medium text-slate-600">2022 — Present · 3 years</p>
           </div>
-          <ul class="mt-5 list-disc space-y-2 pl-5 text-rose-100/80">
+          <ul class="mt-5 list-disc space-y-2 pl-5 text-slate-600">
             <li>Delivering production-grade UI for fast-moving trading and DeFi-focused workflows.</li>
             <li>Collaborating with product, design, and blockchain teams to ship clear and reliable transaction experiences.</li>
             <li>Improving frontend performance and maintainability using reusable architecture and typed development practices.</li>
@@ -193,20 +182,20 @@ const navLinks = [
       </section>
 
       <section id="projects" class="mt-16 space-y-6">
-        <h2 class="text-2xl font-semibold text-white md:text-3xl">Selected Projects</h2>
+        <h2 class="text-2xl font-bold text-slate-900 md:text-3xl">Selected Projects</h2>
         <div class="grid gap-5 md:grid-cols-3">
           <article
             v-for="project in highlights"
             :key="project.name"
-            class="rounded-3xl border border-white/10 bg-rose-950/70 p-6 shadow-[0_0_25px_rgba(244,63,94,0.2)] transition duration-300 hover:-translate-y-1 hover:border-rose-300/60"
+            class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:shadow-md"
           >
-            <h3 class="text-lg font-semibold text-white">{{ project.name }}</h3>
-            <p class="mt-3 text-sm leading-relaxed text-rose-100/80">{{ project.description }}</p>
+            <h3 class="text-lg font-semibold text-slate-900">{{ project.name }}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-slate-600">{{ project.description }}</p>
             <div class="mt-4 flex flex-wrap gap-2">
               <span
                 v-for="tech in project.stack"
                 :key="tech"
-                class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium uppercase tracking-[0.2em] text-rose-200"
+                class="rounded-md border border-slate-300 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-600"
               >
                 {{ tech }}
               </span>
@@ -215,16 +204,16 @@ const navLinks = [
         </div>
       </section>
 
-      <section id="contact" class="mt-16 rounded-3xl border border-white/10 bg-rose-950/70 p-8 text-center shadow-[0_0_35px_rgba(244,63,94,0.25)]">
-        <h2 class="text-2xl font-semibold text-white md:text-3xl">Let’s build something great</h2>
-        <p class="mx-auto mt-3 max-w-2xl text-rose-100/80">
+      <section id="contact" class="mt-16 rounded-2xl border border-slate-200 bg-white p-8 text-center">
+        <h2 class="text-2xl font-bold text-slate-900 md:text-3xl">Let's Build Something Together</h2>
+        <p class="mx-auto mt-3 max-w-2xl text-slate-600">
           Open to collaborating on ambitious frontend and Web3 products.
           Feel free to reach out for opportunities, consulting, or partnerships.
         </p>
         <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
           <a
             href="mailto:ivan@example.com"
-            class="rounded-full border border-rose-400/60 bg-rose-400/20 px-5 py-2.5 text-sm font-semibold uppercase tracking-[0.2em] text-rose-100 transition hover:-translate-y-0.5 hover:bg-rose-400/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-300"
+            class="rounded-lg border border-blue-600 bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
           >
             Email Me
           </a>
@@ -232,7 +221,7 @@ const navLinks = [
             href="https://github.com"
             target="_blank"
             rel="noreferrer"
-            class="rounded-full border border-pink-300/60 bg-pink-300/10 px-5 py-2.5 text-sm font-semibold uppercase tracking-[0.2em] text-pink-100 transition hover:-translate-y-0.5 hover:bg-pink-300/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-200"
+            class="rounded-lg border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:border-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
           >
             GitHub
           </a>
@@ -240,7 +229,7 @@ const navLinks = [
             href="https://linkedin.com"
             target="_blank"
             rel="noreferrer"
-            class="rounded-full border border-pink-300/60 bg-pink-300/10 px-5 py-2.5 text-sm font-semibold uppercase tracking-[0.2em] text-pink-100 transition hover:-translate-y-0.5 hover:bg-pink-300/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pink-200"
+            class="rounded-lg border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:border-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
           >
             LinkedIn
           </a>
