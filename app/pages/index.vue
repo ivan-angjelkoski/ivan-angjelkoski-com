@@ -52,24 +52,24 @@ const navLinks = [
 </script>
 
 <template>
-  <div class="relative overflow-hidden bg-white text-slate-800">
-    <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-slate-50 to-white" />
+  <div class="relative overflow-hidden bg-[#090909] text-orange-100">
+    <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#1a1208] via-[#100b05] to-[#090909]" />
 
     <div class="relative mx-auto min-h-screen w-full max-w-6xl px-6 pb-24 pt-8 md:px-10">
-      <header class="sticky top-0 z-20 mb-14 bg-white/80 backdrop-blur">
+      <header class="sticky top-0 z-20 mb-14 bg-[#090909]/85 backdrop-blur">
         <nav
-          class="mx-auto flex w-full flex-wrap items-center justify-between gap-3 border-b border-slate-200 pb-4 md:w-fit md:border-0 md:pb-0"
+          class="mx-auto flex w-full flex-wrap items-center justify-between gap-3 border-b border-orange-500/30 pb-4 md:w-fit md:border-0 md:pb-0"
           aria-label="Page sections"
         >
-          <div class="flex items-center gap-2 text-sm font-semibold text-slate-900">
-            <span class="text-blue-600">Ivan Angjelkoski</span>
+          <div class="flex items-center gap-2 text-sm font-semibold text-orange-100">
+            <span class="text-orange-400">Ivan Angjelkoski</span>
           </div>
-          <div class="flex flex-wrap items-center gap-4 text-sm text-slate-600">
+          <div class="flex flex-wrap items-center gap-4 text-sm text-orange-200/80">
             <a
               v-for="link in navLinks"
               :key="link.href"
               :href="link.href"
-              class="transition hover:text-blue-600 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+              class="transition hover:text-orange-400 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500"
             >
               {{ link.label }}
             </a>
@@ -79,21 +79,21 @@ const navLinks = [
 
       <section
         id="about"
-        class="grid items-center gap-10 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm md:grid-cols-[1.2fr_1fr] md:p-12"
+        class="grid items-center gap-10 rounded-2xl border border-orange-500/30 bg-[#140d07] p-8 shadow-[0_0_20px_rgba(251,146,60,0.15)] md:grid-cols-[1.2fr_1fr] md:p-12"
       >
         <div class="space-y-6">
           <div class="flex flex-wrap items-center gap-3">
-            <span class="rounded-full border border-blue-600/30 bg-blue-50 px-4 py-1.5 text-xs font-medium uppercase tracking-wider text-blue-700">
+            <span class="rounded-full border border-orange-400/40 bg-orange-500/10 px-4 py-1.5 text-xs font-medium uppercase tracking-wider text-orange-300">
               Available for Projects
             </span>
-            <span class="rounded-full border border-slate-300 bg-slate-50 px-4 py-1.5 text-xs font-medium uppercase tracking-wider text-slate-600">
+            <span class="rounded-full border border-orange-500/40 bg-[#140d07] px-4 py-1.5 text-xs font-medium uppercase tracking-wider text-orange-200/80">
               Frontend Developer
             </span>
           </div>
-          <h1 class="text-4xl font-bold leading-tight text-slate-900 md:text-5xl">
+          <h1 class="text-4xl font-bold leading-tight text-orange-100 md:text-5xl">
             I build modern web applications
           </h1>
-          <p class="max-w-2xl text-lg leading-relaxed text-slate-600">
+          <p class="max-w-2xl text-lg leading-relaxed text-orange-200/80">
             I am a Frontend Developer at Injective Labs, focused on building polished,
             high-performance product experiences for modern web and Web3 users. I have spent
             3 years shipping frontend features and interfaces for crypto-native products, and I am
@@ -102,39 +102,39 @@ const navLinks = [
           <div class="flex flex-wrap gap-3">
             <a
               href="#projects"
-              class="rounded-lg border border-blue-600 bg-blue-600 px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+              class="rounded-lg border border-orange-500 bg-orange-500 px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-orange-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500"
             >
               View Projects
             </a>
             <a
               href="#contact"
-              class="rounded-lg border border-slate-300 bg-white px-6 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:border-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+              class="rounded-lg border border-orange-500/40 bg-[#120b06] px-6 py-2.5 text-sm font-semibold text-orange-100 transition hover:bg-[#1d130a] hover:border-orange-400/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500"
             >
               Get in Touch
             </a>
           </div>
         </div>
 
-        <div class="relative mx-auto w-full max-w-sm rounded-2xl border border-slate-200 bg-slate-50 p-6">
-          <div class="flex items-center justify-between text-xs font-medium uppercase tracking-wider text-slate-500">
+        <div class="relative mx-auto w-full max-w-sm rounded-2xl border border-orange-500/40 bg-[#120b06] p-6 shadow-[0_0_28px_rgba(251,146,60,0.15)]">
+          <div class="flex items-center justify-between text-xs font-medium uppercase tracking-wider text-orange-300/70">
             <span>Quick Profile</span>
-            <span class="text-blue-600">Details</span>
+            <span class="text-orange-400">Details</span>
           </div>
-          <div class="mt-6 space-y-3 text-sm text-slate-600">
-            <p><strong class="text-slate-900">Name:</strong> Ivan Angjelkoski</p>
-            <p><strong class="text-slate-900">Location:</strong> North Macedonia</p>
-            <p><strong class="text-slate-900">Experience:</strong> 3+ Years</p>
-            <p><strong class="text-slate-900">Role:</strong> Frontend Developer</p>
+          <div class="mt-6 space-y-3 text-sm text-orange-200/80">
+            <p><strong class="text-orange-100">Name:</strong> Ivan Angjelkoski</p>
+            <p><strong class="text-orange-100">Location:</strong> North Macedonia</p>
+            <p><strong class="text-orange-100">Experience:</strong> 3+ Years</p>
+            <p><strong class="text-orange-100">Role:</strong> Frontend Developer</p>
           </div>
-          <div class="mt-6 rounded-xl border border-slate-200 bg-white p-4 text-xs text-slate-600">
-            <p class="font-semibold text-slate-900 mb-2">Core Technologies</p>
+          <div class="mt-6 rounded-xl border border-orange-500/30 bg-[#0f0a06] p-4 text-xs text-orange-200/80">
+            <p class="font-semibold text-orange-100 mb-2">Core Technologies</p>
             <p class="ml-4">• React / Next.js</p>
             <p class="ml-4">• Vue / Nuxt</p>
             <p class="ml-4">• TypeScript</p>
             <p class="ml-4">• Web3 / Cosmos</p>
           </div>
           <div class="mt-6 flex items-center gap-4">
-            <div class="h-16 w-16 overflow-hidden rounded-xl border border-slate-300 bg-slate-200">
+            <div class="h-16 w-16 overflow-hidden rounded-xl border border-orange-500/40 bg-[#25170d]">
               <img
                 src="/ivan_angjelkoski.jpeg"
                 alt="Portrait of Ivan Angjelkoski"
@@ -142,16 +142,16 @@ const navLinks = [
               >
             </div>
             <div>
-              <p class="text-sm font-semibold text-slate-900">Ivan Angjelkoski</p>
-              <p class="text-xs text-slate-600">Frontend Developer</p>
+              <p class="text-sm font-semibold text-orange-100">Ivan Angjelkoski</p>
+              <p class="text-xs text-orange-200/80">Frontend Developer</p>
             </div>
           </div>
         </div>
       </section>
 
       <section id="skills" class="mt-16 space-y-6">
-        <h2 class="text-2xl font-bold text-slate-900 md:text-3xl">Skills & Technologies</h2>
-        <p class="max-w-3xl text-slate-600">
+        <h2 class="text-2xl font-bold text-orange-100 md:text-3xl">Skills & Technologies</h2>
+        <p class="max-w-3xl text-orange-200/80">
           A practical frontend toolkit for building robust web apps, full-stack services, and
           blockchain-integrated products.
         </p>
@@ -159,7 +159,7 @@ const navLinks = [
           <span
             v-for="skill in skills"
             :key="skill"
-            class="rounded-lg border border-slate-300 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700"
+            class="rounded-lg border border-orange-500/40 bg-[#140d07] px-4 py-2 text-sm font-medium text-orange-100"
           >
             {{ skill }}
           </span>
@@ -167,13 +167,13 @@ const navLinks = [
       </section>
 
       <section id="experience" class="mt-16 space-y-6">
-        <h2 class="text-2xl font-bold text-slate-900 md:text-3xl">Experience</h2>
-        <article class="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:shadow-md">
+        <h2 class="text-2xl font-bold text-orange-100 md:text-3xl">Experience</h2>
+        <article class="rounded-2xl border border-orange-500/40 bg-[#120b06] p-7 shadow-[0_0_24px_rgba(251,146,60,0.18)] transition duration-300 hover:shadow-[0_0_34px_rgba(251,146,60,0.3)]">
           <div class="flex flex-wrap items-baseline justify-between gap-3">
-            <h3 class="text-xl font-semibold text-slate-900">Injective Labs — Frontend Developer</h3>
-            <p class="text-sm font-medium text-slate-600">2022 — Present · 3 years</p>
+            <h3 class="text-xl font-semibold text-orange-100">Injective Labs — Frontend Developer</h3>
+            <p class="text-sm font-medium text-orange-200/80">2022 — Present · 3 years</p>
           </div>
-          <ul class="mt-5 list-disc space-y-2 pl-5 text-slate-600">
+          <ul class="mt-5 list-disc space-y-2 pl-5 text-orange-200/80">
             <li>Delivering production-grade UI for fast-moving trading and DeFi-focused workflows.</li>
             <li>Collaborating with product, design, and blockchain teams to ship clear and reliable transaction experiences.</li>
             <li>Improving frontend performance and maintainability using reusable architecture and typed development practices.</li>
@@ -182,20 +182,20 @@ const navLinks = [
       </section>
 
       <section id="projects" class="mt-16 space-y-6">
-        <h2 class="text-2xl font-bold text-slate-900 md:text-3xl">Selected Projects</h2>
+        <h2 class="text-2xl font-bold text-orange-100 md:text-3xl">Selected Projects</h2>
         <div class="grid gap-5 md:grid-cols-3">
           <article
             v-for="project in highlights"
             :key="project.name"
-            class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition duration-300 hover:shadow-md"
+            class="rounded-2xl border border-orange-500/40 bg-[#120b06] p-6 shadow-[0_0_24px_rgba(251,146,60,0.18)] transition duration-300 hover:shadow-[0_0_34px_rgba(251,146,60,0.3)]"
           >
-            <h3 class="text-lg font-semibold text-slate-900">{{ project.name }}</h3>
-            <p class="mt-3 text-sm leading-relaxed text-slate-600">{{ project.description }}</p>
+            <h3 class="text-lg font-semibold text-orange-100">{{ project.name }}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-orange-200/80">{{ project.description }}</p>
             <div class="mt-4 flex flex-wrap gap-2">
               <span
                 v-for="tech in project.stack"
                 :key="tech"
-                class="rounded-md border border-slate-300 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-600"
+                class="rounded-md border border-orange-500/40 bg-[#140d07] px-3 py-1 text-xs font-medium text-orange-200/80"
               >
                 {{ tech }}
               </span>
@@ -204,16 +204,16 @@ const navLinks = [
         </div>
       </section>
 
-      <section id="contact" class="mt-16 rounded-2xl border border-slate-200 bg-white p-8 text-center">
-        <h2 class="text-2xl font-bold text-slate-900 md:text-3xl">Let's Build Something Together</h2>
-        <p class="mx-auto mt-3 max-w-2xl text-slate-600">
+      <section id="contact" class="mt-16 rounded-2xl border border-orange-500/40 bg-[#120b06] p-8 text-center shadow-[0_0_30px_rgba(251,146,60,0.18)]">
+        <h2 class="text-2xl font-bold text-orange-100 md:text-3xl">Let's Build Something Together</h2>
+        <p class="mx-auto mt-3 max-w-2xl text-orange-200/80">
           Open to collaborating on ambitious frontend and Web3 products.
           Feel free to reach out for opportunities, consulting, or partnerships.
         </p>
         <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
           <a
             href="mailto:ivan@example.com"
-            class="rounded-lg border border-blue-600 bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+            class="rounded-lg border border-orange-500 bg-orange-500 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-orange-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500"
           >
             Email Me
           </a>
@@ -221,7 +221,7 @@ const navLinks = [
             href="https://github.com"
             target="_blank"
             rel="noreferrer"
-            class="rounded-lg border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:border-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+            class="rounded-lg border border-orange-500/40 bg-[#120b06] px-5 py-2.5 text-sm font-semibold text-orange-100 transition hover:bg-[#1d130a] hover:border-orange-400/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500"
           >
             GitHub
           </a>
@@ -229,7 +229,7 @@ const navLinks = [
             href="https://linkedin.com"
             target="_blank"
             rel="noreferrer"
-            class="rounded-lg border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 hover:border-slate-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+            class="rounded-lg border border-orange-500/40 bg-[#120b06] px-5 py-2.5 text-sm font-semibold text-orange-100 transition hover:bg-[#1d130a] hover:border-orange-400/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500"
           >
             LinkedIn
           </a>
