@@ -3,7 +3,11 @@
 
 body {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
-  @apply bg-white text-slate-800 antialiased;
+  @apply bg-[#090909] text-orange-100 antialiased;
+  background-image:
+    radial-gradient(circle at 10% 10%, rgba(251, 146, 60, 0.18), transparent 30%),
+    radial-gradient(circle at 90% 0%, rgba(249, 115, 22, 0.16), transparent 28%),
+    linear-gradient(180deg, #090909 0%, #0d0805 45%, #090909 100%);
 }
 
 h1,
@@ -11,9 +15,10 @@ h2,
 h3 {
   font-weight: 700;
   font-family: "Inter", system-ui, -apple-system, sans-serif;
+  text-shadow: 0 0 12px rgba(251, 146, 60, 0.15);
 }
 
 ::selection {
-  background: rgba(59, 130, 246, 0.2);
-  color: #1e3a8a;
+  background: rgba(249, 115, 22, 0.35);
+  color: #fff7ed;
 }
