@@ -56,20 +56,22 @@ const navLinks = [
     <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-blue-50 via-gray-50 to-white" />
 
     <div class="relative mx-auto min-h-screen w-full max-w-6xl px-6 pb-24 pt-8 md:px-10">
-      <header class="sticky top-0 z-20 mb-14 bg-white/90 backdrop-blur">
+      <header class="sticky top-0 z-20 mb-14 bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-100">
         <nav
-          class="mx-auto flex w-full flex-wrap items-center justify-between gap-3 border-b border-blue-200/50 pb-4 md:w-fit md:border-0 md:pb-0"
+          class="mx-auto flex w-full flex-wrap items-center justify-between gap-3 py-4 md:w-fit"
           aria-label="Page sections"
         >
-          <div class="flex items-center gap-2 text-sm font-semibold text-gray-900">
-            <span class="text-blue-600">Ivan Angjelkoski</span>
+          <div class="flex items-center gap-2">
+            <span class="text-base font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              Ivan Angjelkoski
+            </span>
           </div>
-          <div class="flex flex-wrap items-center gap-4 text-sm text-gray-600">
+          <div class="flex flex-wrap items-center gap-1">
             <a
               v-for="link in navLinks"
               :key="link.href"
               :href="link.href"
-              class="transition hover:text-blue-600 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+              class="relative px-4 py-2 text-sm font-medium text-gray-700 transition-all duration-200 rounded-lg hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 hover:text-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50 focus-visible:ring-offset-2"
             >
               {{ link.label }}
             </a>
