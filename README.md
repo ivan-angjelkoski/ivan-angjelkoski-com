@@ -1,23 +1,30 @@
-# Nuxt Minimal Starter
+# Ivan Angjelkoski — Personal Portfolio Website
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A modern, responsive portfolio website built with Nuxt 4, TypeScript, and Tailwind CSS. Showcasing work as a Frontend Developer specializing in Web2 and Web3 applications.
+
+## About
+
+This is my personal portfolio website featuring:
+- Professional profile with work experience
+- Skills and technology showcase
+- Selected project highlights
+- Contact information
+- Dark/light mode support
+- Fully responsive design
+
+## Tech Stack
+
+- **Framework**: Nuxt 4
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 4
+- **Deployment**: GitHub Pages (via GitHub Actions)
 
 ## Setup
 
 Make sure to install dependencies:
 
 ```bash
-# npm
-npm install
-
-# pnpm
 pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
 ## Development Server
@@ -25,17 +32,7 @@ bun install
 Start the development server on `http://localhost:3000`:
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
 pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
 ## Production
@@ -43,33 +40,19 @@ bun run dev
 Build the application for production:
 
 ```bash
-# npm
-npm run build
-
-# pnpm
 pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
 
 Locally preview production build:
 
 ```bash
-# npm
-npm run preview
-
-# pnpm
 pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Deployment
+
+This project is automatically deployed to GitHub Pages via the deployment workflow. Push changes to the `master` branch to trigger a new deployment.
+
+## License
+
+MIT
