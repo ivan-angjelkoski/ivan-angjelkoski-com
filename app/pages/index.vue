@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const isMenuOpen = ref(false);
+
 useSeoMeta({
   title: "Ivan Angjelkoski — Frontend Developer",
   description:
@@ -58,7 +60,7 @@ const navLinks = [
     <div class="relative mx-auto min-h-screen w-full max-w-6xl px-6 pb-24 pt-8 md:px-10">
       <header class="sticky top-0 z-20 mb-14 bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-100">
         <nav
-          class="mx-auto flex w-full flex-wrap items-center justify-between gap-3 py-4 md:w-fit"
+          class="mx-auto flex w-full items-center justify-between gap-3 py-4"
           aria-label="Page sections"
         >
           <div class="flex items-center gap-2">
@@ -66,7 +68,47 @@ const navLinks = [
               Ivan Angjelkoski
             </span>
           </div>
-          <div class="flex flex-wrap items-center gap-1">
+          
+          <button
+            @click="isMenuOpen = !isMenuOpen"
+            class="md:hidden flex items-center justify-center w-10 h-10 rounded-lg border border-gray-300 bg-gray-50 text-gray-700 transition hover:bg-gray-100 hover:border-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+            :aria-expanded="isMenuOpen"
+            aria-controls="mobile-menu"
+            aria-label="Toggle navigation menu"
+          >
+            <svg
+              v-if="!isMenuOpen"
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+            <svg
+              v-else
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+
+          <div class="hidden md:flex flex-wrap items-center gap-1">
             <a
               v-for="link in navLinks"
               :key="link.href"
@@ -77,6 +119,65 @@ const navLinks = [
             </a>
           </div>
         </nav>
+
+        <Transition
+          enter-active-class="transition duration-200 ease-out"
+          enter-from-class="-translate-x-full"
+          enter-to-class="translate-x-0"
+          leave-active-class="transition duration-200 ease-in"
+          leave-from-class="translate-x-0"
+          leave-to-class="-translate-x-full"
+        >
+          <div
+            v-if="isMenuOpen"
+            id="mobile-menu"
+            class="md:hidden fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-2xl border-r border-gray-200"
+          >
+            <div class="flex h-16 items-center justify-between border-b border-gray-200 px-4">
+              <span class="text-base font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                Ivan Angjelkoski
+              </span>
+              <button
+                @click="isMenuOpen = false"
+                class="flex items-center justify-center w-8 h-8 rounded-lg text-gray-600 hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                aria-label="Close menu"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="p-4 space-y-2">
+              <a
+                v-for="link in navLinks"
+                :key="link.href"
+                :href="link.href"
+                @click="isMenuOpen = false"
+                class="block w-full px-4 py-3 text-sm font-medium text-gray-700 rounded-lg hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 hover:text-blue-700 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50 focus-visible:ring-offset-2"
+              >
+                {{ link.label }}
+              </a>
+            </div>
+          </div>
+        </Transition>
+
+        <div
+          v-if="isMenuOpen"
+          @click="isMenuOpen = false"
+          class="md:hidden fixed inset-0 bg-black/30 z-40"
+          aria-hidden="true"
+        />
       </header>
 
       <section
