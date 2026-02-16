@@ -194,7 +194,7 @@ const navLinks = [
             </span>
           </div>
           <h1 class="text-4xl font-bold leading-tight text-gray-900 md:text-5xl dark:text-white">
-            I build modern web applications
+            WebDev
           </h1>
           <p class="max-w-2xl text-lg leading-relaxed text-gray-600 dark:text-gray-300">
             I am a Frontend Developer at Injective Labs, focused on building polished,
