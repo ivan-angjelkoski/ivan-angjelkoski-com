@@ -7,9 +7,9 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
   modules: ["@nuxt/eslint", "@nuxtjs/color-mode"],
   colorMode: {
-    fallback: "light",
+    fallback: "dark",
     storageKey: "ivan-angjelkoski-color-mode",
-    preference: "light",
+    preference: "dark",
   },
   vite: {
     plugins: [tailwindcss()],
