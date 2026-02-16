@@ -3,11 +3,18 @@
 
 body {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
-  @apply bg-white text-gray-900 antialiased;
+  @apply bg-white text-gray-900 antialiased dark:bg-gray-950 dark:text-gray-100;
   background-image:
     radial-gradient(circle at 10% 10%, rgba(37, 99, 235, 0.08), transparent 30%),
     radial-gradient(circle at 90% 0%, rgba(29, 78, 216, 0.06), transparent 28%),
     linear-gradient(180deg, #ffffff 0%, #f8fafc 45%, #ffffff 100%);
+}
+
+@dark body {
+  background-image:
+    radial-gradient(circle at 10% 10%, rgba(59, 130, 246, 0.15), transparent 30%),
+    radial-gradient(circle at 90% 0%, rgba(99, 102, 241, 0.12), transparent 28%),
+    linear-gradient(180deg, #0a0a0a 0%, #111827 45%, #0a0a0a 100%);
 }
 
 h1,
@@ -20,4 +27,9 @@ h3 {
 ::selection {
   background: rgba(37, 99, 235, 0.2);
   color: #1e3a8a;
+}
+
+@dark ::selection {
+  background: rgba(59, 130, 246, 0.3);
+  color: #e0f2fe;
 }
