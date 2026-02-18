@@ -1,0 +1,38 @@
+name: "[Bug] Bug Report"
+description: Report a bug to help us improve
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of what the bug is.
+      placeholder: Describe the bug here...
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to reproduce the bug.
+      placeholder: |
+        1. First step
+        2. Second step
+        ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What you expected to happen.
+      placeholder: Describe what you expected...
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment (Optional)
+      description: OS, browser, version, etc.
+      placeholder: e.g., Windows 11, Chrome 120
