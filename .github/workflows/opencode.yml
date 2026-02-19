@@ -27,7 +27,7 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config user.name "Ivan Nightex"
+          git config user.name "Ivan Angjelkoski"
           git config user.email "ivanangelkoski95@gmail.com"
 
       - name: Run opencode
@@ -36,4 +36,3 @@ jobs:
           ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
         with:
           model: opencode/minimax-m2.5-free
-          token: ${{ secrets.PAT_TOKEN }}
