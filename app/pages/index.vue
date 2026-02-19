@@ -1,7 +1,89 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
 
 onMounted(() => {
+  gsap.from('.header-animate', {
+    y: -50,
+    opacity: 0,
+    duration: 0.8,
+    ease: 'power3.out',
+    stagger: 0.1
+  })
+
+  gsap.from('.about-animate', {
+    scrollTrigger: {
+      trigger: '#about',
+      start: 'top 80%',
+    },
+    y: 60,
+    opacity: 0,
+    duration: 1,
+    ease: 'power3.out',
+    stagger: 0.15
+  })
+
+  gsap.from('.skills-animate', {
+    scrollTrigger: {
+      trigger: '#skills',
+      start: 'top 80%',
+    },
+    y: 40,
+    opacity: 0,
+    duration: 0.8,
+    ease: 'power3.out',
+    stagger: 0.1
+  })
+
+  gsap.from('.experience-animate', {
+    scrollTrigger: {
+      trigger: '#experience',
+      start: 'top 80%',
+    },
+    y: 40,
+    opacity: 0,
+    duration: 0.8,
+    ease: 'power3.out',
+    stagger: 0.15
+  })
+
+  gsap.from('.projects-animate', {
+    scrollTrigger: {
+      trigger: '#projects',
+      start: 'top 80%',
+    },
+    y: 40,
+    opacity: 0,
+    duration: 0.8,
+    ease: 'power3.out',
+    stagger: 0.15
+  })
+
+  gsap.from('.contact-animate', {
+    scrollTrigger: {
+      trigger: '#contact',
+      start: 'top 80%',
+    },
+    y: 40,
+    opacity: 0,
+    duration: 0.8,
+    ease: 'power3.out',
+    stagger: 0.1
+  })
+
+  gsap.from('.footer-animate', {
+    scrollTrigger: {
+      trigger: 'footer',
+      start: 'top 90%',
+    },
+    y: 20,
+    opacity: 0,
+    duration: 0.6,
+    ease: 'power3.out'
+  })
 })
 
 useSeoMeta({

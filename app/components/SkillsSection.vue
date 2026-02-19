@@ -13,7 +13,7 @@ const skills = [
 </script>
 
 <template>
-  <section id="skills" class="mt-16 space-y-6">
+  <section id="skills" class="mt-16 space-y-6 skills-animate">
     <h2 class="text-2xl font-bold font-['Orbitron'] md:text-3xl">
       <span class="text-[#ff6b00]">></span> Skills <span class="text-[#ff6b00]">&</span> Technologies
     </h2>
