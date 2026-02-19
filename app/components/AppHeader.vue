@@ -11,7 +11,7 @@ const navLinks = [
 </script>
 
 <template>
-  <header class="sticky top-0 z-20 mb-14 bg-[#0a0a0a]/95 backdrop-blur-sm border-b border-[#ff6b00]/30">
+  <header class="sticky top-0 z-20 mb-14 bg-[#0a0a0a]/95 backdrop-blur-sm border-b border-[#ff6b00]/30 header-animate">
     <nav
       class="mx-auto flex w-full items-center justify-between gap-3 py-4"
       aria-label="Page sections"

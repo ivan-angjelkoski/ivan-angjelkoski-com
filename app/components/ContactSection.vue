@@ -1,5 +1,5 @@
 <template>
-  <section id="contact" class="mt-16 rounded-none border border-[#ff6b00]/30 bg-[#111111] p-8 text-center relative">
+  <section id="contact" class="mt-16 rounded-none border border-[#ff6b00]/30 bg-[#111111] p-8 text-center relative contact-animate">
     <div class="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-[#ff6b00]" />
     <div class="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-[#ff6b00]" />
     <div class="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-[#ff6b00]" />

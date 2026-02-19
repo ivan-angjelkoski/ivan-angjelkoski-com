@@ -1,5 +1,5 @@
 <template>
-  <section id="experience" class="mt-16 space-y-6">
+  <section id="experience" class="mt-16 space-y-6 experience-animate">
     <h2 class="text-2xl font-bold font-['Orbitron'] md:text-3xl">
       <span class="text-[#ff6b00]">></span> Experience
     </h2>

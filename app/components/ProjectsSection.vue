@@ -22,7 +22,7 @@ const highlights = [
 </script>
 
 <template>
-  <section id="projects" class="mt-16 space-y-6">
+  <section id="projects" class="mt-16 space-y-6 projects-animate">
     <h2 class="text-2xl font-bold font-['Orbitron'] md:text-3xl">
       <span class="text-[#ff6b00]">></span> Selected Projects
     </h2>

@@ -1,7 +1,7 @@
 <template>
   <section
     id="about"
-    class="grid items-center gap-10 rounded-none border border-[#ff6b00]/40 bg-[#111111] p-8 md:grid-cols-[1.2fr_1fr] md:p-12 relative"
+    class="grid items-center gap-10 rounded-none border border-[#ff6b00]/40 bg-[#111111] p-8 md:grid-cols-[1.2fr_1fr] md:p-12 relative about-animate"
   >
     <div class="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-[#ff6b00]" />
     <div class="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-[#ff6b00]" />
