@@ -36,4 +36,4 @@ jobs:
           ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
         with:
           model: opencode/minimax-m2.5-free
-          github_token: ${{ secrets.PAT_TOKEN }}
+          token: ${{ secrets.PAT_TOKEN }}
