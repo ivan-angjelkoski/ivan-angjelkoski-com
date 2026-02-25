@@ -5,9 +5,9 @@
   --cyber-black: #0a0a0a;
   --cyber-black-2: #111111;
   --cyber-black-3: #1a1a1a;
-  --cyber-orange: #ff6b00;
-  --cyber-orange-light: #ff8c00;
-  --cyber-orange-glow: #ff4500;
+  --cyber-orange: #00a8ff;
+  --cyber-orange-light: #38bdf8;
+  --cyber-orange-glow: #0ea5e9;
   --cyber-gray: #2a2a2a;
   --cyber-gray-light: #3a3a3a;
   --cyber-text: #e0e0e0;
@@ -27,8 +27,8 @@ body {
   background-color: var(--cyber-black);
   color: var(--cyber-text);
   background-image:
-    linear-gradient(rgba(255, 107, 0, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 107, 0, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(0, 168, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 168, 255, 0.03) 1px, transparent 1px);
   background-size: 50px 50px;
   background-position: center top;
   min-height: 100vh;
@@ -165,8 +165,8 @@ a:hover {
 
 .tech-grid {
   background-image:
-    linear-gradient(rgba(255, 107, 0, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 107, 0, 0.1) 1px, transparent 1px);
+    linear-gradient(rgba(0, 168, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 168, 255, 0.1) 1px, transparent 1px);
   background-size: 20px 20px;
 }
 
