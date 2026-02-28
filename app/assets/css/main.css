@@ -2,16 +2,16 @@
 @import "tailwindcss";
 
 :root {
-  --cyber-black: #0a0a0a;
-  --cyber-black-2: #111111;
-  --cyber-black-3: #1a1a1a;
-  --cyber-orange: #00a8ff;
-  --cyber-orange-light: #38bdf8;
-  --cyber-orange-glow: #0ea5e9;
-  --cyber-gray: #2a2a2a;
-  --cyber-gray-light: #3a3a3a;
-  --cyber-text: #e0e0e0;
-  --cyber-text-muted: #888888;
+  --cyber-white: #f5f5f5;
+  --cyber-white-2: #ffffff;
+  --cyber-white-3: #ebebeb;
+  --cyber-blue: #0077cc;
+  --cyber-blue-light: #0099e6;
+  --cyber-blue-glow: #0066aa;
+  --cyber-gray: #cccccc;
+  --cyber-gray-dark: #888888;
+  --cyber-text: #1a1a1a;
+  --cyber-text-muted: #555555;
 }
 
 * {
@@ -24,11 +24,11 @@ html {
 
 body {
   font-family: "Share Tech Mono", monospace;
-  background-color: var(--cyber-black);
+  background-color: var(--cyber-white);
   color: var(--cyber-text);
   background-image:
-    linear-gradient(rgba(0, 168, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 168, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(0, 119, 204, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 119, 204, 0.05) 1px, transparent 1px);
   background-size: 50px 50px;
   background-position: center top;
   min-height: 100vh;
@@ -53,8 +53,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::selection {
-  background: var(--cyber-orange);
-  color: var(--cyber-black);
+  background: var(--cyber-blue);
+  color: var(--cyber-white);
 }
 
 a {
@@ -62,16 +62,16 @@ a {
 }
 
 a:hover {
-  color: var(--cyber-orange);
-  text-shadow: 0 0 10px var(--cyber-orange);
+  color: var(--cyber-blue);
+  text-shadow: 0 0 10px var(--cyber-blue-light);
 }
 
 .cyber-glow {
-  text-shadow: 0 0 10px var(--cyber-orange), 0 0 20px var(--cyber-orange), 0 0 40px var(--cyber-orange);
+  text-shadow: 0 0 10px var(--cyber-blue), 0 0 20px var(--cyber-blue-light), 0 0 40px var(--cyber-blue-glow);
 }
 
 .cyber-border {
-  border: 1px solid var(--cyber-orange);
+  border: 1px solid var(--cyber-blue);
   position: relative;
 }
 
@@ -82,8 +82,8 @@ a:hover {
   left: -1px;
   width: 10px;
   height: 10px;
-  border-top: 2px solid var(--cyber-orange);
-  border-left: 2px solid var(--cyber-orange);
+  border-top: 2px solid var(--cyber-blue);
+  border-left: 2px solid var(--cyber-blue);
 }
 
 .cyber-border::after {
@@ -93,8 +93,8 @@ a:hover {
   right: -1px;
   width: 10px;
   height: 10px;
-  border-bottom: 2px solid var(--cyber-orange);
-  border-right: 2px solid var(--cyber-orange);
+  border-bottom: 2px solid var(--cyber-blue);
+  border-right: 2px solid var(--cyber-blue);
 }
 
 .scan-line {
@@ -109,7 +109,7 @@ a:hover {
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--cyber-orange), transparent);
+  background: linear-gradient(90deg, transparent, var(--cyber-blue), transparent);
   animation: scan 3s linear infinite;
 }
 
@@ -165,13 +165,13 @@ a:hover {
 
 .tech-grid {
   background-image:
-    linear-gradient(rgba(0, 168, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 168, 255, 0.1) 1px, transparent 1px);
+    linear-gradient(rgba(0, 119, 204, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 119, 204, 0.1) 1px, transparent 1px);
   background-size: 20px 20px;
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, var(--cyber-orange) 0%, var(--cyber-orange-light) 100%);
+  background: linear-gradient(135deg, var(--cyber-blue) 0%, var(--cyber-blue-light) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
