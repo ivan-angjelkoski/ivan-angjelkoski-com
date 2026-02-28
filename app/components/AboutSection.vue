@@ -10,9 +10,6 @@
     
     <div class="space-y-6">
       <div class="flex flex-wrap items-center gap-3">
-        <span class="rounded-none border border-[#0077cc] bg-[#0077cc]/10 px-4 py-1.5 text-xs font-medium font-['Orbitron'] uppercase tracking-wider text-[#0077cc] flicker">
-          > Available for Projects
-        </span>
         <span class="rounded-none border border-[#cccccc] bg-[#ebebeb] px-4 py-1.5 text-xs font-medium font-['Orbitron'] uppercase tracking-wider text-[#555555]">
           Frontend Developer
         </span>
