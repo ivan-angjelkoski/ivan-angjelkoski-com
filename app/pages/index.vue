@@ -98,7 +98,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="relative overflow-hidden bg-[#0a0a0a] text-[#e0e0e0]">
+  <div class="relative overflow-hidden bg-[#f5f5f5] text-[#1a1a1a]">
     <div class="pointer-events-none absolute inset-0 tech-grid opacity-50" />
 
     <div class="relative mx-auto min-h-screen w-full max-w-6xl px-6 pb-24 pt-8 md:px-10 scan-line">
