@@ -1,4 +1,9 @@
 <script setup lang="ts">
+defineProps<{
+  foo?: string;
+  bar: number;
+}>();
+
 const isMenuOpen = ref(false);
 
 const navLinks = [
@@ -11,23 +16,27 @@ const navLinks = [
 </script>
 
 <template>
-  <header class="sticky top-0 z-20 mb-14 bg-[#ffffff]/95 backdrop-blur-sm border-b border-[#0077cc]/30 header-animate">
+  <header
+    class="sticky top-0 z-20 mb-14 bg-[#ffffff]/95 backdrop-blur-sm border-b border-[#0077cc]/30 header-animate"
+  >
     <nav
       class="mx-auto flex w-full items-center justify-between gap-3 py-4"
       aria-label="Page sections"
     >
       <div class="flex items-center gap-2">
-        <span class="text-base font-bold font-['Orbitron'] tracking-wider text-[#0077cc] cyber-glow">
+        <span
+          class="text-base font-bold font-['Orbitron'] tracking-wider text-[#0077cc] cyber-glow"
+        >
           IVAN_ANGJELKOSKI
         </span>
       </div>
-      
+
       <button
-        @click="isMenuOpen = !isMenuOpen"
         class="md:hidden flex items-center justify-center w-10 h-10 rounded-none border border-[#0077cc] bg-[#ebebeb] text-[#0077cc] transition hover:bg-[#0077cc] hover:text-[#ffffff] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0077cc]"
         :aria-expanded="isMenuOpen"
         aria-controls="mobile-menu"
         aria-label="Toggle navigation menu"
+        @click="isMenuOpen = !isMenuOpen"
       >
         <svg
           v-if="!isMenuOpen"
@@ -86,14 +95,18 @@ const navLinks = [
         id="mobile-menu"
         class="md:hidden fixed inset-y-0 left-0 z-50 w-64 bg-[#ffffff] shadow-[0_0_30px_rgba(0,119,204,0.3)] border-r border-[#0077cc]/30"
       >
-        <div class="flex h-16 items-center justify-between border-b border-[#0077cc]/30 px-4">
-          <span class="text-base font-bold font-['Orbitron'] tracking-wider text-[#0077cc]">
+        <div
+          class="flex h-16 items-center justify-between border-b border-[#0077cc]/30 px-4"
+        >
+          <span
+            class="text-base font-bold font-['Orbitron'] tracking-wider text-[#0077cc]"
+          >
             IVAN_ANGJELKOSKI
           </span>
           <button
-            @click="isMenuOpen = false"
             class="flex items-center justify-center w-8 h-8 rounded-none border border-[#0077cc]/50 text-[#0077cc] hover:bg-[#0077cc] hover:text-[#ffffff] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0077cc]"
             aria-label="Close menu"
+            @click="isMenuOpen = false"
           >
             <svg
               class="w-5 h-5"
@@ -116,8 +129,8 @@ const navLinks = [
             v-for="link in navLinks"
             :key="link.href"
             :href="link.href"
-            @click="isMenuOpen = false"
             class="block w-full px-4 py-3 text-sm font-medium font-['Share_Tech_Mono'] text-[#1a1a1a] rounded-none border border-transparent hover:border-[#0077cc] hover:text-[#0077cc] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0077cc]/50"
+            @click="isMenuOpen = false"
           >
             [{{ link.label }}]
           </a>
@@ -127,9 +140,9 @@ const navLinks = [
 
     <div
       v-if="isMenuOpen"
-      @click="isMenuOpen = false"
       class="md:hidden fixed inset-0 bg-black/70 z-40"
       aria-hidden="true"
+      @click="isMenuOpen = false"
     />
   </header>
 </template>
