@@ -1,14 +1,14 @@
 <template>
-  <section id="contact" class="mt-16 rounded-none border border-[#0077cc]/30 bg-[#ffffff] p-8 text-center relative contact-animate">
+  <section id="contact" class="mt-16 rounded-none border border-[#0077cc]/30 bg-[#ffffff] dark:bg-[#111111] p-8 text-center relative contact-animate">
     <div class="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-[#0077cc]" />
     <div class="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-[#0077cc]" />
     <div class="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-[#0077cc]" />
     <div class="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-[#0077cc]" />
     
-    <h2 class="text-2xl font-bold font-['Orbitron'] md:text-3xl text-[#1a1a1a]">
+    <h2 class="text-2xl font-bold font-['Orbitron'] md:text-3xl text-[#1a1a1a] dark:text-[#e5e5e5]">
       <span class="text-[#0077cc]">></span> Let<span class="text-[#0077cc]">'</span>s Build Something Together
     </h2>
-    <p class="mx-auto mt-3 max-w-2xl text-[#555555] font-['Share_Tech_Mono']">
+    <p class="mx-auto mt-3 max-w-2xl text-[#555555] dark:text-[#999999] font-['Share_Tech_Mono']">
       > Open to collaborating on ambitious frontend and Web3 products.<br/>
       > Feel free to reach out for opportunities, consulting, or partnerships.
     </p>

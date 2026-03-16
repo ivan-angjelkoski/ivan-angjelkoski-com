@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Share+Tech+Mono&display=swap");
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
   --cyber-white: #f5f5f5;
@@ -12,6 +13,23 @@
   --cyber-gray-dark: #888888;
   --cyber-text: #1a1a1a;
   --cyber-text-muted: #555555;
+  --cyber-bg: #f5f5f5;
+  --cyber-bg-secondary: #ebebeb;
+}
+
+.dark {
+  --cyber-white: #0a0a0a;
+  --cyber-white-2: #111111;
+  --cyber-white-3: #1a1a1a;
+  --cyber-yellow: #ffcc00;
+  --cyber-yellow-light: #ffdd33;
+  --cyber-yellow-glow: #e6b800;
+  --cyber-gray: #333333;
+  --cyber-gray-dark: #666666;
+  --cyber-text: #e5e5e5;
+  --cyber-text-muted: #999999;
+  --cyber-bg: #050505;
+  --cyber-bg-secondary: #0f0f0f;
 }
 
 * {
@@ -24,7 +42,7 @@ html {
 
 body {
   font-family: "Share Tech Mono", monospace;
-  background-color: var(--cyber-white);
+  background-color: var(--cyber-bg);
   color: var(--cyber-text);
   background-image:
     linear-gradient(rgba(255, 204, 0, 0.05) 1px, transparent 1px),
@@ -32,6 +50,7 @@ body {
   background-size: 50px 50px;
   background-position: center top;
   min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body::before {
