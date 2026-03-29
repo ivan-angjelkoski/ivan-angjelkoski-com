@@ -7,17 +7,10 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
   app: {
     head: {
-      link: [
-        { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" }
-      ]
-    }
+      link: [{ rel: "icon", type: "image/svg+xml", href: "/favicon.svg" }],
+    },
   },
-  modules: ["@nuxt/eslint", "@nuxtjs/color-mode"],
-  colorMode: {
-    fallback: "dark",
-    storageKey: "ivan-angjelkoski-color-mode",
-    preference: "dark",
-  },
+  modules: ["@nuxt/eslint"],
   vite: {
     plugins: [tailwindcss()],
   },

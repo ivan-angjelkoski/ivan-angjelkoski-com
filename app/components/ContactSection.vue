@@ -1,40 +1,37 @@
 <template>
-  <section id="contact" class="mt-16 rounded-none border border-[#0077cc]/30 bg-[#ffffff] dark:bg-[#111111] p-8 text-center relative contact-animate">
-    <div class="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-[#0077cc]" />
-    <div class="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-[#0077cc]" />
-    <div class="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-[#0077cc]" />
-    <div class="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-[#0077cc]" />
-    
-    <h2 class="text-2xl font-bold font-['Orbitron'] md:text-3xl text-[#1a1a1a] dark:text-[#e5e5e5]">
-      <span class="text-[#0077cc]">></span> Let<span class="text-[#0077cc]">'</span>s Build Something Together
-    </h2>
-    <p class="mx-auto mt-3 max-w-2xl text-[#555555] dark:text-[#999999] font-['Share_Tech_Mono']">
-      > Open to collaborating on ambitious frontend and Web3 products.<br/>
-      > Feel free to reach out for opportunities, consulting, or partnerships.
-    </p>
-    <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
-      <a
-        href="mailto:ivan@example.com"
-        class="rounded-none border border-[#0077cc] bg-[#0077cc] px-5 py-2.5 text-sm font-semibold font-['Orbitron'] text-[#ffffff] transition hover:bg-[#0099e6] hover:shadow-[0_0_20px_#0077cc] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0077cc]"
-      >
-        EMAIL_ME
-      </a>
-      <a
-        href="https://github.com"
-        target="_blank"
-        rel="noreferrer"
-        class="rounded-none border border-[#0077cc]/50 bg-transparent px-5 py-2.5 text-sm font-semibold font-['Orbitron'] text-[#0077cc] transition hover:bg-[#0077cc]/10 hover:shadow-[0_0_10px_#0077cc] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0077cc]"
-      >
-        GITHUB
-      </a>
-      <a
-        href="https://linkedin.com"
-        target="_blank"
-        rel="noreferrer"
-        class="rounded-none border border-[#0077cc]/50 bg-transparent px-5 py-2.5 text-sm font-semibold font-['Orbitron'] text-[#0077cc] transition hover:bg-[#0077cc]/10 hover:shadow-[0_0_10px_#0077cc] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0077cc]"
-      >
-        LINKEDIN
-      </a>
+  <section
+    id="contact"
+    class="section-shell contact-animate relative overflow-hidden p-7 text-center sm:p-10"
+  >
+    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(216,195,165,0.3),transparent_55%)]" />
+
+    <div class="relative mx-auto max-w-3xl space-y-5">
+      <span class="editorial-label mx-auto justify-center">Contact</span>
+      <h2 class="section-heading">Open to thoughtful product collaborations and new opportunities.</h2>
+      <p class="section-intro mx-auto">
+        If you are hiring for frontend engineering, planning a product redesign, or exploring a
+        polished Web3 experience, I would be glad to connect and discuss how I can contribute.
+      </p>
+
+      <div class="flex flex-col justify-center gap-3 pt-2 sm:flex-row sm:flex-wrap">
+        <a href="mailto:ivan@example.com" class="btn btn-primary">Email</a>
+        <a
+          href="https://github.com"
+          target="_blank"
+          rel="noreferrer"
+          class="btn btn-secondary"
+        >
+          GitHub
+        </a>
+        <a
+          href="https://linkedin.com"
+          target="_blank"
+          rel="noreferrer"
+          class="btn btn-secondary"
+        >
+          LinkedIn
+        </a>
+      </div>
     </div>
   </section>
 </template>

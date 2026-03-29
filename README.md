@@ -9,7 +9,7 @@ This is my personal portfolio website featuring:
 - Skills and technology showcase
 - Selected project highlights
 - Contact information
-- Dark/light mode support
+- Premium editorial visual system
 - Fully responsive design
 
 ## Tech Stack

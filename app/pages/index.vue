@@ -6,107 +6,87 @@ import { onMounted } from "vue";
 gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
-  gsap.from(".header-animate", {
-    y: -50,
-    opacity: 0,
-    duration: 0.8,
-    ease: "power3.out",
-    stagger: 0.1,
-  });
-
-  gsap.from(".about-animate", {
-    scrollTrigger: {
-      trigger: "#about",
-      start: "top 80%",
-    },
-    y: 60,
-    opacity: 0,
-    duration: 1,
-    ease: "power3.out",
-    stagger: 0.15,
-  });
-
   gsap.from(".skills-animate", {
     scrollTrigger: {
       trigger: "#skills",
-      start: "top 80%",
+      start: "top 84%",
+      once: true,
     },
-    y: 40,
+    y: 24,
     opacity: 0,
     duration: 0.8,
-    ease: "power3.out",
-    stagger: 0.1,
+    ease: "power2.out",
+    stagger: 0.12,
   });
 
   gsap.from(".experience-animate", {
     scrollTrigger: {
       trigger: "#experience",
-      start: "top 80%",
+      start: "top 84%",
+      once: true,
     },
-    y: 40,
+    y: 24,
     opacity: 0,
     duration: 0.8,
-    ease: "power3.out",
-    stagger: 0.15,
+    ease: "power2.out",
+    stagger: 0.12,
   });
 
   gsap.from(".projects-animate", {
     scrollTrigger: {
       trigger: "#projects",
-      start: "top 80%",
+      start: "top 84%",
+      once: true,
     },
-    y: 40,
+    y: 24,
     opacity: 0,
     duration: 0.8,
-    ease: "power3.out",
-    stagger: 0.15,
+    ease: "power2.out",
+    stagger: 0.1,
   });
 
   gsap.from(".contact-animate", {
     scrollTrigger: {
       trigger: "#contact",
-      start: "top 80%",
+      start: "top 86%",
+      once: true,
     },
-    y: 40,
+    y: 24,
     opacity: 0,
-    duration: 0.8,
-    ease: "power3.out",
-    stagger: 0.1,
+    duration: 0.75,
+    ease: "power2.out",
   });
 
   gsap.from(".footer-animate", {
     scrollTrigger: {
       trigger: "footer",
-      start: "top 90%",
+      start: "top 92%",
+      once: true,
     },
-    y: 20,
+    y: 16,
     opacity: 0,
-    duration: 0.6,
-    ease: "power3.out",
+    duration: 0.7,
+    ease: "power2.out",
   });
 });
 
 useSeoMeta({
   title: "Ivan Angjelkoski — Frontend Developer",
   description:
-    "Frontend Developer at Injective Labs with 3 years of experience building performant web and Web3 products with Vue, Nuxt, React, and TypeScript from North Macedonia.",
+    "Frontend Developer at Injective Labs crafting polished, high-performance web and Web3 interfaces with Vue, Nuxt, React, and TypeScript.",
   ogTitle: "Ivan Angjelkoski — Frontend Developer",
   ogDescription:
-    "Frontend Developer at Injective Labs building modern interfaces for Web2 and Web3 products.",
+    "A premium editorial portfolio presenting frontend craftsmanship across modern web and Web3 products.",
   twitterCard: "summary_large_image",
 });
 </script>
 
 <template>
-  <div class="relative overflow-hidden bg-[#f5f5f5] dark:bg-[#050505] text-[#1a1a1a] dark:text-[#e5e5e5]">
-    <div class="pointer-events-none absolute inset-0 tech-grid opacity-50" />
+  <div id="home" class="relative min-h-screen overflow-x-clip text-[var(--text)]">
+    <div class="page-shell mx-auto w-full max-w-[1120px] px-5 pb-20 pt-6 sm:px-8 lg:px-10">
+      <AppHeader />
 
-    <div
-      class="relative mx-auto min-h-screen w-full max-w-6xl px-6 pb-24 pt-8 md:px-10 scan-line"
-    >
-      <AppHeader v-bind="{ bar: 1 }" />
-
-      <main>
+      <main class="mt-8 space-y-20 pb-12 sm:space-y-24">
         <AboutSection />
         <SkillsSection />
         <ExperienceSection />
