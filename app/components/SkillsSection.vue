@@ -1,34 +1,67 @@
 <script setup lang="ts">
-const skills = [
-  "Vue",
-  "Nuxt",
-  "React",
-  "Next.js",
-  "TypeScript",
-  "Web3",
-  "Cosmos",
-  "Node/Bun",
-  "Hono",
+type SkillGroup = {
+  category: string;
+  items: string[];
+};
+
+const skillGroups: SkillGroup[] = [
+  {
+    category: "Frontend",
+    items: ["Vue", "Nuxt", "React", "Next.js", "TypeScript"],
+  },
+  {
+    category: "Backend",
+    items: ["Node.js", "Bun", "Hono", "REST APIs"],
+  },
+  {
+    category: "Design / UI",
+    items: ["Design systems", "Component architecture", "Interaction polish"],
+  },
+  {
+    category: "Tooling",
+    items: ["Tailwind CSS", "Storybook", "ESLint", "GitHub Actions"],
+  },
+  {
+    category: "Performance / Accessibility",
+    items: ["Core Web Vitals", "A11y-first markup", "Progressive enhancement"],
+  },
+  {
+    category: "Deployment",
+    items: ["Static deployment", "CI/CD pipelines", "Environment strategy"],
+  },
 ];
 </script>
 
 <template>
-  <section id="skills" class="mt-16 space-y-6 skills-animate">
-    <h2 class="text-2xl font-bold font-['Orbitron'] md:text-3xl text-[#1a1a1a] dark:text-[#e5e5e5]">
-      <span class="text-[#0077cc]">></span> Skills <span class="text-[#0077cc]">&</span> Technologies
-    </h2>
-    <p class="max-w-3xl text-[#555555] dark:text-[#999999] font-['Share_Tech_Mono']">
-      > A practical frontend toolkit for building robust web apps, full-stack services, and
-      blockchain-integrated products.
-    </p>
-    <div class="flex flex-wrap gap-3">
-      <span
-        v-for="skill in skills"
-        :key="skill"
-        class="rounded-none border border-[#0077cc]/50 bg-[#f5f5f5] dark:bg-[#1a1a1a] px-4 py-2 text-sm font-['Share_Tech_Mono'] text-[#1a1a1a] dark:text-[#e5e5e5] hover:border-[#0077cc] hover:text-[#0077cc] hover:shadow-[0_0_10px_#0077cc] transition"
+  <section id="skills" class="skills-animate space-y-8">
+    <div class="space-y-4">
+      <span class="editorial-label">Capabilities</span>
+      <h2 class="section-heading">A curated toolkit for building polished digital products.</h2>
+      <p class="section-intro">
+        My work spans interface architecture, implementation quality, and maintainable delivery.
+        I combine engineering rigor with design sensitivity to produce reliable product experiences.
+      </p>
+    </div>
+
+    <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+      <article
+        v-for="group in skillGroups"
+        :key="group.category"
+        class="premium-card skills-animate p-5"
       >
-        [{{ skill }}]
-      </span>
+        <h3 class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[var(--text)]">
+          {{ group.category }}
+        </h3>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span
+            v-for="item in group.items"
+            :key="item"
+            class="chip"
+          >
+            {{ item }}
+          </span>
+        </div>
+      </article>
     </div>
   </section>
 </template>
