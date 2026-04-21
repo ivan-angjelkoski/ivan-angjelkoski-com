@@ -17,6 +17,8 @@ const isMenuOpen = ref(false);
 const shouldRestoreFocus = ref(false);
 const menuButtonRef = ref<HTMLButtonElement | null>(null);
 const mobileMenuRef = ref<HTMLElement | null>(null);
+const activeHash = ref<string>("#home");
+let scrollObserver: IntersectionObserver | null = null;
 
 const openMenu = () => {
   shouldRestoreFocus.value = true;
@@ -68,6 +70,26 @@ onMounted(() => {
   window.addEventListener("keydown", onEscape);
   window.addEventListener("resize", onResize);
   window.addEventListener("hashchange", onHashChange);
+
+  const sectionIds = navLinks.map((l) => l.href.slice(1));
+  const sections = sectionIds
+    .map((id) => document.getElementById(id))
+    .filter((el): el is HTMLElement => el !== null);
+
+  if (sections.length && "IntersectionObserver" in window) {
+    scrollObserver = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible) {
+          activeHash.value = `#${visible.target.id}`;
+        }
+      },
+      { rootMargin: "-40% 0px -50% 0px", threshold: [0, 0.25, 0.5, 1] },
+    );
+    sections.forEach((s) => scrollObserver!.observe(s));
+  }
 });
 
 onBeforeUnmount(() => {
@@ -75,13 +97,14 @@ onBeforeUnmount(() => {
   window.removeEventListener("resize", onResize);
   window.removeEventListener("hashchange", onHashChange);
   document.body.style.overflow = "";
+  scrollObserver?.disconnect();
 });
 </script>
 
 <template>
   <header class="sticky top-4 z-40">
     <div
-      class="rounded-3xl border border-[var(--border)] bg-[rgba(255,253,252,0.9)] px-4 py-3 shadow-[0_8px_26px_rgba(75,57,41,0.07)] backdrop-blur-md sm:px-6"
+      class="rounded-3xl border border-[var(--border)] bg-[rgba(10,10,10,0.65)] px-4 py-3 shadow-[0_8px_30px_rgba(0,0,0,0.5)] backdrop-blur-xl sm:px-6"
     >
       <nav class="flex items-center justify-between gap-4" aria-label="Primary navigation">
         <a href="#home" class="group inline-flex min-w-0 items-center gap-2">
@@ -99,7 +122,12 @@ onBeforeUnmount(() => {
 
         <ul class="hidden items-center gap-6 md:flex" role="list">
           <li v-for="link in navLinks" :key="link.href">
-            <a :href="link.href" class="nav-link">
+            <a
+              :href="link.href"
+              class="nav-link"
+              :class="{ 'is-active': activeHash === link.href }"
+              :aria-current="activeHash === link.href ? 'page' : undefined"
+            >
               {{ link.label }}
             </a>
           </li>
@@ -147,7 +175,7 @@ onBeforeUnmount(() => {
         aria-label="Mobile navigation"
       >
         <button
-          class="absolute inset-0 h-full w-full bg-[rgba(47,42,38,0.28)] backdrop-blur-[1px]"
+          class="absolute inset-0 h-full w-full bg-[rgba(0,0,0,0.65)] backdrop-blur-[2px]"
           aria-label="Close navigation menu"
           @click="closeMenu(true)"
         />
@@ -163,7 +191,7 @@ onBeforeUnmount(() => {
           <aside
             id="mobile-menu"
             ref="mobileMenuRef"
-            class="absolute left-4 right-4 top-4 rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-5 shadow-[0_26px_50px_rgba(73,54,38,0.2)]"
+            class="absolute left-4 right-4 top-4 rounded-3xl border border-[var(--border)] bg-[var(--surface)] p-5 shadow-[0_30px_60px_rgba(0,0,0,0.7)]"
             @click.stop
           >
             <div class="mb-4 flex items-center justify-between">
@@ -194,7 +222,7 @@ onBeforeUnmount(() => {
               <li v-for="link in navLinks" :key="`mobile-${link.href}`">
                 <a
                   :href="link.href"
-                  class="block rounded-2xl px-4 py-3 text-sm font-semibold uppercase tracking-[0.13em] text-[var(--text-muted)] hover:bg-[var(--bg-soft)] hover:text-[var(--text)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgba(191,165,138,0.38)]"
+                  class="block rounded-2xl px-4 py-3 text-sm font-semibold uppercase tracking-[0.13em] text-[var(--text-muted)] hover:bg-[var(--bg-soft)] hover:text-[var(--text)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgba(201,169,127,0.4)]"
                   @click="closeMenu(false)"
                 >
                   {{ link.label }}
