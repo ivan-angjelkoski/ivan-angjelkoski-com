@@ -33,35 +33,33 @@ const skillGroups: SkillGroup[] = [
 </script>
 
 <template>
-  <section id="skills" class="skills-animate space-y-8">
+  <section id="skills" class="skills-animate space-y-10">
     <div class="space-y-4">
       <span class="editorial-label">Capabilities</span>
-      <h2 class="section-heading">A curated toolkit for building polished digital products.</h2>
+      <h2 class="section-heading max-w-3xl">A curated toolkit for building polished digital products.</h2>
       <p class="section-intro">
         My work spans interface architecture, implementation quality, and maintainable delivery.
         I combine engineering rigor with design sensitivity to produce reliable product experiences.
       </p>
     </div>
 
-    <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-      <article
-        v-for="group in skillGroups"
-        :key="group.category"
-        class="premium-card skills-animate p-5"
-      >
-        <h3 class="font-['Cormorant_Garamond'] text-2xl font-semibold text-[var(--text)]">
-          {{ group.category }}
-        </h3>
-        <div class="mt-4 flex flex-wrap gap-2">
-          <span
-            v-for="item in group.items"
-            :key="item"
-            class="chip"
-          >
-            {{ item }}
-          </span>
-        </div>
-      </article>
+    <div class="section-shell overflow-hidden">
+      <ul role="list" class="divide-y divide-[var(--border)]">
+        <li
+          v-for="group in skillGroups"
+          :key="group.category"
+          class="skills-animate grid gap-3 px-6 py-5 sm:grid-cols-[minmax(11rem,0.45fr)_1fr] sm:items-baseline sm:gap-8 sm:px-8 sm:py-6"
+        >
+          <h3 class="font-['Cormorant_Garamond'] text-[1.55rem] font-semibold leading-tight text-[var(--text)]">
+            {{ group.category }}
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span v-for="item in group.items" :key="item" class="chip">
+              {{ item }}
+            </span>
+          </div>
+        </li>
+      </ul>
     </div>
   </section>
 </template>

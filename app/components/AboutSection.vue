@@ -10,6 +10,10 @@
         Design-forward interfaces built with precision, clarity, and modern web craft.
       </h1>
 
+      <p class="eyebrow-italic max-w-2xl">
+        a portfolio in progress &mdash; written, shipped, and refined from Skopje.
+      </p>
+
       <p class="section-intro">
         I am Ivan Angjelkoski, a frontend developer at Injective Labs focused on premium product
         experiences for web and Web3. For the past three years, I have shipped high-impact
@@ -24,7 +28,7 @@
       <div class="grid gap-4 pt-2 sm:grid-cols-3">
         <article class="premium-card p-4">
           <p class="muted-meta">Experience</p>
-          <p class="mt-2 font-['Cormorant_Garamond'] text-3xl font-semibold text-[var(--text)]">3+</p>
+          <p class="mt-2 font-['Cormorant_Garamond'] text-3xl font-semibold tabular text-[var(--text)]">3+</p>
           <p class="mt-1 text-sm text-[var(--text-muted)]">Years delivering production UI</p>
         </article>
         <article class="premium-card p-4">
@@ -41,7 +45,7 @@
     </div>
 
     <aside class="premium-card flex flex-col gap-5 p-6 sm:p-7">
-      <div class="media-frame h-[20.5rem] w-full overflow-hidden">
+      <div class="media-frame h-[26rem] w-full overflow-hidden sm:h-[28rem]">
         <img
           src="/ivan_angjelkoski.jpeg"
           alt="Portrait of Ivan Angjelkoski"

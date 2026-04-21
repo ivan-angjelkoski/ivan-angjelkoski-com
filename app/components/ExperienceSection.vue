@@ -48,7 +48,7 @@ const experience: ExperienceEntry[] = [
                 {{ item.role }}
               </h3>
             </div>
-            <p class="rounded-full border border-[var(--border)] bg-[var(--bg-soft)] px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-[var(--text-muted)]">
+            <p class="rounded-full border border-[var(--border)] bg-[var(--bg-soft)] px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] tabular text-[var(--text-muted)]">
               {{ item.timeline }}
             </p>
           </div>
