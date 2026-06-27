@@ -41,7 +41,7 @@ const onEscape = (event: KeyboardEvent) => {
 };
 
 const onResize = () => {
-  if (window.innerWidth >= 768 && isMenuOpen.value) {
+  if (window.innerWidth >= 1024 && isMenuOpen.value) {
     closeMenu(false);
   }
 };
@@ -128,7 +128,7 @@ onBeforeUnmount(() => {
           </span>
         </a>
 
-        <ul class="hidden items-center gap-5 md:flex" role="list">
+        <ul class="hidden items-center gap-5 lg:flex" role="list">
           <li v-for="link in navLinks" :key="link.href">
             <a
               :href="link.href"
@@ -144,7 +144,7 @@ onBeforeUnmount(() => {
 
         <button
           ref="menuButtonRef"
-          class="inline-flex h-10 w-10 items-center justify-center border border-[var(--color-border-strong)] bg-[var(--color-bg-inset)] text-[var(--color-accent)] md:hidden"
+          class="inline-flex h-10 w-10 items-center justify-center border border-[var(--color-border-strong)] bg-[var(--color-bg-inset)] text-[var(--color-accent)] lg:hidden"
           :aria-expanded="isMenuOpen"
           aria-controls="mobile-menu"
           aria-label="Open navigation menu"
@@ -178,7 +178,7 @@ onBeforeUnmount(() => {
     >
       <div
         v-if="isMenuOpen"
-        class="fixed inset-0 z-50 md:hidden"
+        class="fixed inset-0 z-50 lg:hidden"
         role="dialog"
         aria-modal="true"
         aria-label="Mobile navigation"
