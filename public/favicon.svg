@@ -1,4 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="4" fill="#1e293b"/>
-  <text x="16" y="22" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#f8fafc" text-anchor="middle">IA</text>
+  <rect width="32" height="32" fill="#050505"/>
+  <rect x="0.5" y="0.5" width="31" height="31" fill="none" stroke="#2a2a2d" stroke-width="1"/>
+  <path d="M0 0 L8 0 L0 8 Z" fill="#f5ff00"/>
+  <path d="M32 32 L24 32 L32 24 Z" fill="#f5ff00"/>
+  <text x="16" y="22" font-family="'JetBrains Mono', monospace" font-size="15" font-weight="700" fill="#f5ff00" text-anchor="middle" letter-spacing="0.5">IA</text>
 </svg>

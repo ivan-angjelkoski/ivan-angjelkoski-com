@@ -1,26 +1,24 @@
 <template>
   <section
     id="contact"
-    class="section-shell contact-animate relative overflow-hidden p-7 text-center sm:p-10"
+    class="contact-animate relative overflow-hidden border border-[var(--color-accent)] bg-[var(--color-bg-panel)] p-7 text-center sm:p-12"
+    style="clip-path: polygon(0 16px, 16px 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%);"
   >
-    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(201,169,127,0.14),transparent_60%)]" />
-    <div
-      class="pointer-events-none absolute inset-0 opacity-[0.07] mix-blend-screen"
-      style="background-image: url('https://picsum.photos/seed/ivan-contact/1600/900'); background-size: cover; background-position: center;"
-    />
+    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(245,255,0,0.16),transparent_62%)]" />
+    <div class="pointer-events-none absolute inset-0 opacity-[0.05] mix-blend-screen" style="background-image: linear-gradient(rgba(245,255,0,1) 1px, transparent 1px), linear-gradient(90deg, rgba(245,255,0,1) 1px, transparent 1px); background-size: 40px 40px;" />
 
     <div class="relative mx-auto max-w-3xl space-y-5">
-      <span class="editorial-label mx-auto justify-center">Contact</span>
-      <h2 class="section-heading">Open to thoughtful product collaborations and new opportunities.</h2>
+      <p class="eyebrow mx-auto justify-center">// Initialize_Contact</p>
+      <h2 class="section-heading">Open to product collaborations &amp; new opportunities.</h2>
       <p class="section-intro mx-auto">
-        If you are hiring for frontend engineering, planning a product redesign, or exploring a
-        polished Web3 experience, I would be glad to connect and discuss how I can contribute.
+        Hiring for frontend engineering, planning a product redesign, or exploring a
+        polished Web3 experience? Let&rsquo;s connect and discuss how I can contribute.
       </p>
 
       <div class="flex flex-col justify-center gap-3 pt-2 sm:flex-row sm:flex-wrap">
         <!-- TODO: replace with real contact email -->
         <a href="mailto:ivan@example.com" class="btn btn-primary">
-          <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9 6 9-6" /><rect x="3" y="5" width="18" height="14" rx="2" /></svg>
+          <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true"><path d="M3 7l9 6 9-6" /><rect x="3" y="5" width="18" height="14" /></svg>
           Email
         </a>
         <!-- TODO: replace with real GitHub profile URL -->
