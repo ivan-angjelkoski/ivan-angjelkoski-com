@@ -57,10 +57,10 @@ const projects: Project[] = [
 <template>
   <section id="projects" class="projects-animate space-y-10">
     <div class="space-y-4">
-      <span class="editorial-label">Featured Work</span>
-      <h2 class="section-heading max-w-3xl">Selected projects, presented as crafted case-study moments.</h2>
+      <span class="eyebrow">// Archive</span>
+      <h2 class="section-heading max-w-3xl">Selected projects, presented as case-study modules.</h2>
       <p class="section-intro">
-        Each project balances functional clarity with visual polish, translating complex product
+        Each project balances functional clarity with visual polish, translating complex
         requirements into interfaces that feel natural, reliable, and intentionally designed.
       </p>
     </div>
@@ -74,9 +74,16 @@ const projects: Project[] = [
       >
         <div class="project-media lg:col-span-7">
           <div class="media-frame h-56 p-5 sm:h-72">
-            <div class="flex h-full flex-col justify-between rounded-[0.85rem] border border-[var(--border-strong)] bg-[rgba(0,0,0,0.35)] p-5 backdrop-blur-sm">
-              <p class="muted-meta tabular">Case {{ String(index + 1).padStart(2, "0") }}</p>
-              <p class="font-['Cormorant_Garamond'] text-3xl leading-[1.05] tracking-[-0.02em] text-[var(--text)] sm:text-4xl">
+            <div class="flex h-full flex-col justify-between border border-[var(--color-border-strong)] bg-[rgba(0,0,0,0.45)] p-5">
+              <div class="flex items-center justify-between">
+                <p class="muted-meta tabular">CASE // {{ String(index + 1).padStart(2, "0") }}</p>
+                <div class="flex gap-1.5">
+                  <span class="h-1.5 w-1.5 bg-[var(--color-red)]" />
+                  <span class="h-1.5 w-1.5 bg-[var(--color-warning)]" />
+                  <span class="h-1.5 w-1.5 bg-[var(--color-success)]" />
+                </div>
+              </div>
+              <p class="font-['Space_Grotesk'] text-2xl font-bold uppercase leading-[1.05] tracking-tight text-[var(--color-text)] sm:text-4xl">
                 {{ project.name }}
               </p>
             </div>
@@ -88,18 +95,18 @@ const projects: Project[] = [
             <div class="flex items-center gap-3">
               <span
                 v-if="project.featured"
-                class="font-['Cormorant_Garamond'] text-[0.95rem] italic text-[var(--accent-strong)]"
+                class="inline-flex items-center gap-1.5 border border-[var(--color-accent)] bg-[rgba(245,255,0,0.08)] px-2 py-0.5 font-['JetBrains_Mono'] text-[0.66rem] font-semibold uppercase tracking-[0.14em] text-[var(--color-accent)]"
               >
                 &#9733; Featured
               </span>
               <p class="muted-meta">{{ project.role }}</p>
             </div>
 
-            <h3 class="font-['Cormorant_Garamond'] text-[1.95rem] font-semibold leading-[1.05] tracking-[-0.02em] text-[var(--text)] sm:text-[2.2rem]">
+            <h3 class="font-['Space_Grotesk'] text-[1.8rem] font-bold uppercase leading-[1.05] tracking-tight text-[var(--color-text)] sm:text-[2.1rem]">
               {{ project.name }}
             </h3>
 
-            <p class="text-[0.95rem] leading-7 text-[var(--text-muted)]">
+            <p class="text-[0.92rem] leading-7 text-[var(--color-text-muted)]">
               {{ project.description }}
             </p>
 
@@ -129,7 +136,7 @@ const projects: Project[] = [
                   aria-disabled="true"
                   role="status"
                 >
-                  {{ link.label }} &middot; On request
+                  {{ link.label }} &middot; NDA
                 </span>
               </template>
             </div>
