@@ -55,7 +55,7 @@ const skillGroups: SkillGroup[] = [
         <li
           v-for="group in skillGroups"
           :key="group.category"
-          class="skills-animate grid gap-3 px-6 py-5 transition-colors duration-150 hover:bg-[rgba(245,255,0,0.02)] sm:grid-cols-[minmax(13rem,0.4fr)_1fr] sm:items-center sm:gap-8 sm:px-8 sm:py-6"
+          class="skills-animate grid gap-3 px-6 py-5 transition-colors duration-150 hover:bg-[rgba(122,98,0,0.04)] sm:grid-cols-[minmax(13rem,0.4fr)_1fr] sm:items-center sm:gap-8 sm:px-8 sm:py-6"
         >
           <div class="flex items-baseline gap-3">
             <span class="font-['JetBrains_Mono'] text-[0.72rem] font-semibold tracking-[0.16em] text-[var(--color-accent)]">{{ group.index }}</span>

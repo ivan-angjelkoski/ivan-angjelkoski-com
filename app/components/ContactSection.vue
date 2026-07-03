@@ -4,8 +4,8 @@
     class="contact-animate relative overflow-hidden border border-[var(--color-accent)] bg-[var(--color-bg-panel)] p-7 text-center sm:p-12"
     style="clip-path: polygon(0 16px, 16px 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%);"
   >
-    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(245,255,0,0.16),transparent_62%)]" />
-    <div class="pointer-events-none absolute inset-0 opacity-[0.05] mix-blend-screen" style="background-image: linear-gradient(rgba(245,255,0,1) 1px, transparent 1px), linear-gradient(90deg, rgba(245,255,0,1) 1px, transparent 1px); background-size: 40px 40px;" />
+    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(122,98,0,0.08),transparent_62%)]" />
+    <div class="pointer-events-none absolute inset-0 opacity-[0.5] mix-blend-multiply" style="background-image: linear-gradient(rgba(20,20,26,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(20,20,26,0.06) 1px, transparent 1px); background-size: 40px 40px;" />
 
     <div class="relative mx-auto max-w-3xl space-y-5">
       <p class="eyebrow mx-auto justify-center">// Initialize_Contact</p>

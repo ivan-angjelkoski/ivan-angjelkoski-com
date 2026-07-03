@@ -3,38 +3,38 @@
 
 :root {
   /* Backgrounds */
-  --color-bg: #050505;
-  --color-bg-elevated: #0b0b0c;
-  --color-bg-panel: #111113;
-  --color-bg-inset: #070708;
+  --color-bg: #f5f5f2;
+  --color-bg-elevated: #ffffff;
+  --color-bg-panel: #ffffff;
+  --color-bg-inset: #ebebe6;
 
   /* Borders */
-  --color-border: #2a2a2d;
-  --color-border-strong: #4a4a4f;
-  --color-border-accent: #f5ff00;
+  --color-border: #e1e1dc;
+  --color-border-strong: #c4c4be;
+  --color-border-accent: var(--color-accent);
 
   /* Text */
-  --color-text: #f2f2f2;
-  --color-text-muted: #a0a0a8;
-  --color-text-subtle: #66666f;
-  --color-text-inverse: #050505;
+  --color-text: #14141a;
+  --color-text-muted: #56565f;
+  --color-text-subtle: #86868e;
+  --color-text-inverse: #ffffff;
 
   /* Accent */
-  --color-accent: #f5ff00;
-  --color-accent-hover: #fbff4d;
-  --color-accent-active: #cdd600;
+  --color-accent: #7a6200;
+  --color-accent-hover: #947a00;
+  --color-accent-active: #635100;
 
   /* Secondary neon accents */
-  --color-cyan: #00eaff;
-  --color-magenta: #ff2bd6;
-  --color-red: #ff3b3b;
-  --color-green: #39ff88;
+  --color-cyan: #0098b5;
+  --color-magenta: #c81fa3;
+  --color-red: #d61f1f;
+  --color-green: #1f9e54;
 
   /* Status */
-  --color-success: #39ff88;
-  --color-warning: #f5ff00;
-  --color-error: #ff3b3b;
-  --color-info: #00eaff;
+  --color-success: #1f9e54;
+  --color-warning: #7a6200;
+  --color-error: #d61f1f;
+  --color-info: #0098b5;
 
   /* Motion */
   --ease-mech: cubic-bezier(0.16, 1, 0.3, 1);
@@ -42,9 +42,9 @@
   --dur-mid: 200ms;
 
   /* Shadows / glow */
-  --shadow-glow-yellow: 0 0 24px rgba(245, 255, 0, 0.3);
-  --shadow-glow-cyan: 0 0 24px rgba(0, 234, 255, 0.25);
-  --shadow-hard: 8px 8px 0 #000;
+  --shadow-glow-yellow: 0 0 24px rgba(122, 98, 0, 0.18);
+  --shadow-glow-cyan: 0 0 24px rgba(0, 152, 181, 0.16);
+  --shadow-hard: 8px 8px 0 rgba(20, 20, 26, 0.88);
 
   /* Backwards-compat aliases used by legacy markup */
   --bg: var(--color-bg);
@@ -74,9 +74,9 @@ body {
   color: var(--color-text);
   background-color: var(--color-bg);
   background-image:
-    radial-gradient(circle at 70% 18%, rgba(245, 255, 0, 0.10), transparent 32%),
-    radial-gradient(circle at 18% 82%, rgba(0, 234, 255, 0.06), transparent 30%),
-    linear-gradient(180deg, #060606 0%, #050505 60%);
+    radial-gradient(circle at 70% 18%, rgba(122, 98, 0, 0.05), transparent 32%),
+    radial-gradient(circle at 18% 82%, rgba(0, 152, 181, 0.04), transparent 30%),
+    linear-gradient(180deg, #fafaf7 0%, #f5f5f2 60%);
   background-attachment: fixed;
 }
 
@@ -87,8 +87,8 @@ body::before {
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(74, 74, 79, 0.10) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(74, 74, 79, 0.10) 1px, transparent 1px);
+    linear-gradient(rgba(20, 20, 26, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(20, 20, 26, 0.05) 1px, transparent 1px);
   background-size: 48px 48px;
   -webkit-mask-image: radial-gradient(circle at 50% 30%, #000 0%, transparent 78%);
   mask-image: radial-gradient(circle at 50% 30%, #000 0%, transparent 78%);
@@ -104,13 +104,13 @@ body::after {
   background-image:
     repeating-linear-gradient(
       0deg,
-      rgba(0, 0, 0, 0.18) 0px,
-      rgba(0, 0, 0, 0.18) 1px,
+      rgba(20, 20, 26, 0.04) 0px,
+      rgba(20, 20, 26, 0.04) 1px,
       transparent 1px,
       transparent 3px
     );
   mix-blend-mode: multiply;
-  opacity: 0.5;
+  opacity: 0.35;
   z-index: 0;
 }
 
@@ -175,8 +175,8 @@ button {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 70% 30%, rgba(245, 255, 0, 0.16), transparent 28%),
-    radial-gradient(circle at 20% 80%, rgba(0, 234, 255, 0.08), transparent 26%);
+    radial-gradient(circle at 70% 30%, rgba(122, 98, 0, 0.07), transparent 28%),
+    radial-gradient(circle at 20% 80%, rgba(0, 152, 181, 0.05), transparent 26%);
   pointer-events: none;
 }
 
@@ -284,7 +284,7 @@ button {
   border: 1px solid var(--color-border);
   border-radius: 2px;
   background:
-    linear-gradient(180deg, rgba(245, 255, 0, 0.012), transparent 40%),
+    linear-gradient(180deg, rgba(122, 98, 0, 0.02), transparent 40%),
     var(--color-bg-panel);
   position: relative;
 }
@@ -399,7 +399,7 @@ button {
   background: var(--color-accent-hover);
   border-color: var(--color-accent-hover);
   transform: translate(2px, -2px);
-  box-shadow: 6px 6px 0 #000, 0 0 28px rgba(245, 255, 0, 0.45);
+  box-shadow: 6px 6px 0 rgba(20, 20, 26, 0.88), 0 0 28px rgba(122, 98, 0, 0.3);
 }
 
 .btn-primary:active {
@@ -417,7 +417,7 @@ button {
 .btn-secondary:hover {
   border-color: var(--color-accent);
   color: var(--color-accent);
-  background: rgba(245, 255, 0, 0.05);
+  background: rgba(122, 98, 0, 0.08);
 }
 
 .btn:active {
@@ -515,7 +515,7 @@ button {
 .chip:hover {
   color: var(--color-accent);
   border-color: var(--color-accent);
-  background: rgba(245, 255, 0, 0.05);
+  background: rgba(122, 98, 0, 0.08);
 }
 
 /* ============ PROJECT SHELL ============ */
@@ -534,7 +534,7 @@ button {
 .project-shell:hover {
   transform: translate(-3px, -3px);
   border-color: var(--color-accent);
-  box-shadow: 6px 6px 0 #000, 0 0 24px rgba(245, 255, 0, 0.18);
+  box-shadow: 6px 6px 0 rgba(20, 20, 26, 0.88), 0 0 24px rgba(122, 98, 0, 0.16);
 }
 
 .media-frame {
@@ -543,16 +543,16 @@ button {
   border-radius: 2px;
   border: 1px solid var(--color-border-strong);
   background:
-    radial-gradient(circle at 80% 20%, rgba(245, 255, 0, 0.10), transparent 50%),
-    radial-gradient(circle at 10% 90%, rgba(0, 234, 255, 0.08), transparent 55%),
-    linear-gradient(135deg, #0c0c0e, #070708);
+    radial-gradient(circle at 80% 20%, rgba(122, 98, 0, 0.08), transparent 50%),
+    radial-gradient(circle at 10% 90%, rgba(0, 152, 181, 0.06), transparent 55%),
+    linear-gradient(135deg, #eeeee9, #e4e4df);
 }
 
 .media-frame::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, transparent 0%, rgba(245, 255, 0, 0.08) 35%, transparent 65%);
+  background: linear-gradient(120deg, transparent 0%, rgba(122, 98, 0, 0.12) 35%, transparent 65%);
   transform: translateX(-130%);
   transition: transform 650ms var(--ease-mech);
   pointer-events: none;
@@ -581,7 +581,7 @@ button {
 .link-chip:hover {
   color: var(--color-accent);
   border-color: var(--color-accent);
-  background: rgba(245, 255, 0, 0.05);
+  background: rgba(122, 98, 0, 0.08);
 }
 
 .link-chip[aria-disabled="true"] {

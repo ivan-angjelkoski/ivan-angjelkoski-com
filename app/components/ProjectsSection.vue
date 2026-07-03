@@ -74,7 +74,7 @@ const projects: Project[] = [
       >
         <div class="project-media lg:col-span-7">
           <div class="media-frame h-56 p-5 sm:h-72">
-            <div class="flex h-full flex-col justify-between border border-[var(--color-border-strong)] bg-[rgba(0,0,0,0.45)] p-5">
+            <div class="flex h-full flex-col justify-between border border-[var(--color-border-strong)] bg-[rgba(235,235,230,0.7)] p-5">
               <div class="flex items-center justify-between">
                 <p class="muted-meta tabular">CASE // {{ String(index + 1).padStart(2, "0") }}</p>
                 <div class="flex gap-1.5">
@@ -95,7 +95,7 @@ const projects: Project[] = [
             <div class="flex items-center gap-3">
               <span
                 v-if="project.featured"
-                class="inline-flex items-center gap-1.5 border border-[var(--color-accent)] bg-[rgba(245,255,0,0.08)] px-2 py-0.5 font-['JetBrains_Mono'] text-[0.66rem] font-semibold uppercase tracking-[0.14em] text-[var(--color-accent)]"
+                class="inline-flex items-center gap-1.5 border border-[var(--color-accent)] bg-[rgba(122,98,0,0.1)] px-2 py-0.5 font-['JetBrains_Mono'] text-[0.66rem] font-semibold uppercase tracking-[0.14em] text-[var(--color-accent)]"
               >
                 &#9733; Featured
               </span>
