@@ -9,8 +9,8 @@ export default defineNuxtConfig({
     head: {
       link: [{ rel: "icon", type: "image/svg+xml", href: "/favicon.svg" }],
       meta: [
-        { name: "theme-color", content: "#050505" },
-        { name: "color-scheme", content: "dark" },
+        { name: "theme-color", content: "#f5f5f2" },
+        { name: "color-scheme", content: "light" },
       ],
     },
   },

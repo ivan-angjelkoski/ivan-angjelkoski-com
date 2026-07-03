@@ -38,7 +38,7 @@ const experience: ExperienceEntry[] = [
         :key="`${item.company}-${item.role}`"
         class="premium-card experience-animate relative overflow-hidden p-6 sm:p-8"
       >
-        <div class="absolute left-0 top-0 h-full w-1 bg-[var(--color-accent)]" style="box-shadow: 0 0 16px rgba(245,255,0,0.6);" />
+        <div class="absolute left-0 top-0 h-full w-1 bg-[var(--color-accent)]" style="box-shadow: 0 0 16px rgba(122,98,0,0.35);" />
 
         <div class="ml-3 space-y-6 sm:ml-5">
           <div class="flex flex-wrap items-start justify-between gap-3">

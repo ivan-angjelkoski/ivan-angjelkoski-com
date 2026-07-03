@@ -105,14 +105,14 @@ onBeforeUnmount(() => {
 <template>
   <header class="sticky top-4 z-40">
     <div
-      class="border border-[var(--color-border)] bg-[rgba(11,11,12,0.78)] px-4 py-3 backdrop-blur-md sm:px-6"
+      class="border border-[var(--color-border)] bg-[rgba(255,255,255,0.82)] px-4 py-3 backdrop-blur-md sm:px-6"
       style="clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%);"
     >
       <nav class="flex items-center justify-between gap-4" aria-label="Primary navigation">
         <a href="#home" class="group inline-flex min-w-0 items-center gap-3">
           <span
             class="inline-flex h-7 w-7 items-center justify-center border border-[var(--color-accent)] font-['JetBrains_Mono'] text-[0.7rem] font-bold text-[var(--color-accent)]"
-            style="box-shadow: 0 0 12px rgba(245,255,0,0.4);"
+            style="box-shadow: 0 0 12px rgba(122,98,0,0.3);"
           >
             IA
           </span>
@@ -184,7 +184,7 @@ onBeforeUnmount(() => {
         aria-label="Mobile navigation"
       >
         <button
-          class="absolute inset-0 h-full w-full bg-[rgba(0,0,0,0.78)] backdrop-blur-[2px]"
+          class="absolute inset-0 h-full w-full bg-[rgba(20,20,26,0.5)] backdrop-blur-[2px]"
           aria-label="Close navigation menu"
           @click="closeMenu(true)"
         />
@@ -232,7 +232,7 @@ onBeforeUnmount(() => {
               <li v-for="link in navLinks" :key="`mobile-${link.href}`">
                 <a
                   :href="link.href"
-                  class="group flex items-center gap-3 border border-transparent px-4 py-3 font-['JetBrains_Mono'] text-sm font-medium uppercase tracking-[0.14em] text-[var(--color-text-muted)] hover:border-[var(--color-accent)] hover:bg-[rgba(245,255,0,0.05)] hover:text-[var(--color-accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]"
+                  class="group flex items-center gap-3 border border-transparent px-4 py-3 font-['JetBrains_Mono'] text-sm font-medium uppercase tracking-[0.14em] text-[var(--color-text-muted)] hover:border-[var(--color-accent)] hover:bg-[rgba(122,98,0,0.08)] hover:text-[var(--color-accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]"
                   @click="closeMenu(false)"
                 >
                   <span class="text-[var(--color-text-subtle)]">{{ link.index }}</span>
