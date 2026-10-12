@@ -57,8 +57,11 @@ const projects: Project[] = [
 <template>
   <section id="projects" class="projects-animate space-y-10">
     <div class="space-y-4">
-      <span class="eyebrow">// Archive</span>
-      <h2 class="section-heading max-w-3xl">Selected projects, presented as case-study modules.</h2>
+      <div class="flex flex-wrap items-center gap-x-5 gap-y-2">
+        <span class="section-tag">// SECTION_04</span>
+        <span class="hud-label">[ARCHIVE.DB]</span>
+      </div>
+      <h2 class="section-heading flicker max-w-3xl">Selected projects, presented as case-study modules.</h2>
       <p class="section-intro">
         Each project balances functional clarity with visual polish, translating complex
         requirements into interfaces that feel natural, reliable, and intentionally designed.
@@ -69,21 +72,27 @@ const projects: Project[] = [
       <article
         v-for="(project, index) in projects"
         :key="project.name"
-        class="project-shell projects-animate grid gap-6 p-5 sm:p-7 lg:grid-cols-12 lg:gap-10 lg:p-8"
+        class="project-shell projects-animate chamfer-lg relative grid gap-6 p-5 sm:p-7 lg:grid-cols-12 lg:gap-10 lg:p-8"
         :class="index % 2 === 1 ? 'lg:[&>.project-media]:order-2' : ''"
       >
         <div class="project-media lg:col-span-7">
-          <div class="media-frame h-56 p-5 sm:h-72">
-            <div class="flex h-full flex-col justify-between border border-[var(--color-border-strong)] bg-[rgba(235,235,230,0.7)] p-5">
+          <div class="media-frame h-56 p-5 sm:h-72" style="background: var(--color-bg-slate);">
+            <div
+              class="relative flex h-full flex-col justify-between border border-[rgba(255,230,0,0.18)] bg-[rgba(5,5,5,0.55)] p-5"
+              style="background-image: linear-gradient(rgba(255, 230, 0, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 230, 0, 0.03) 1px, transparent 1px); background-size: 24px 24px;"
+            >
+              <span class="hud-cross" style="top: 0.5rem; left: 0.5rem;" aria-hidden="true" />
+              <span class="hud-cross" style="bottom: 0.5rem; right: 0.5rem;" aria-hidden="true" />
+
               <div class="flex items-center justify-between">
-                <p class="muted-meta tabular">CASE // {{ String(index + 1).padStart(2, "0") }}</p>
-                <div class="flex gap-1.5">
-                  <span class="h-1.5 w-1.5 bg-[var(--color-red)]" />
-                  <span class="h-1.5 w-1.5 bg-[var(--color-warning)]" />
-                  <span class="h-1.5 w-1.5 bg-[var(--color-success)]" />
+                <p class="muted-meta tabular text-[var(--color-accent)]">CASE // {{ String(index + 1).padStart(2, "0") }}</p>
+                <div class="flex gap-1.5" aria-hidden="true">
+                  <span class="h-1.5 w-1.5 bg-[var(--color-red)]" style="box-shadow: 0 0 6px rgba(255, 45, 45, 0.6);" />
+                  <span class="h-1.5 w-1.5 bg-[var(--color-amber)]" style="box-shadow: 0 0 6px rgba(255, 85, 0, 0.6);" />
+                  <span class="h-1.5 w-1.5 bg-[var(--color-green)]" style="box-shadow: 0 0 6px rgba(61, 255, 154, 0.6);" />
                 </div>
               </div>
-              <p class="font-['Space_Grotesk'] text-2xl font-bold uppercase leading-[1.05] tracking-tight text-[var(--color-text)] sm:text-4xl">
+              <p class="pr-6 text-2xl font-bold uppercase leading-[1.08] text-[var(--color-text)] sm:text-4xl" style="font-family: var(--font-display); letter-spacing: 0.02em; text-shadow: 0 0 28px rgba(255, 230, 0, 0.25);">
                 {{ project.name }}
               </p>
             </div>
@@ -95,14 +104,15 @@ const projects: Project[] = [
             <div class="flex items-center gap-3">
               <span
                 v-if="project.featured"
-                class="inline-flex items-center gap-1.5 border border-[var(--color-accent)] bg-[rgba(122,98,0,0.1)] px-2 py-0.5 font-['JetBrains_Mono'] text-[0.66rem] font-semibold uppercase tracking-[0.14em] text-[var(--color-accent)]"
+                class="inline-flex items-center gap-1.5 border border-[rgba(255,230,0,0.55)] bg-[rgba(255,230,0,0.08)] px-2 py-0.5 font-['JetBrains_Mono'] text-[0.66rem] font-semibold uppercase tracking-[0.14em] text-[var(--color-accent)]"
+                style="box-shadow: 0 0 12px rgba(255, 230, 0, 0.2);"
               >
                 &#9733; Featured
               </span>
               <p class="muted-meta">{{ project.role }}</p>
             </div>
 
-            <h3 class="font-['Space_Grotesk'] text-[1.8rem] font-bold uppercase leading-[1.05] tracking-tight text-[var(--color-text)] sm:text-[2.1rem]">
+            <h3 class="text-[1.8rem] font-bold uppercase leading-[1.05] text-[var(--color-text)] sm:text-[2.1rem]" style="font-family: var(--font-ui); letter-spacing: 0.02em;">
               {{ project.name }}
             </h3>
 

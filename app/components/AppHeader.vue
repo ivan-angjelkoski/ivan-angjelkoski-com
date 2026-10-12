@@ -103,28 +103,27 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <header class="sticky top-4 z-40">
+  <header class="sticky top-3 z-40">
     <div
-      class="border border-[var(--color-border)] bg-[rgba(255,255,255,0.82)] px-4 py-3 backdrop-blur-md sm:px-6"
-      style="clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%);"
+      class="chamfer-md border border-[rgba(255,230,0,0.22)] bg-[rgba(8,8,10,0.72)] px-4 py-3 backdrop-blur-xl sm:px-6"
+      style="filter: drop-shadow(0 0 18px rgba(255, 230, 0, 0.08));"
     >
       <nav class="flex items-center justify-between gap-4" aria-label="Primary navigation">
         <a href="#home" class="group inline-flex min-w-0 items-center gap-3">
           <span
-            class="inline-flex h-7 w-7 items-center justify-center border border-[var(--color-accent)] font-['JetBrains_Mono'] text-[0.7rem] font-bold text-[var(--color-accent)]"
-            style="box-shadow: 0 0 12px rgba(122,98,0,0.3);"
+            class="inline-flex h-8 w-8 items-center justify-center bg-[var(--color-accent)] font-['JetBrains_Mono'] text-[0.7rem] font-bold text-[#060606]"
+            style="clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7px), calc(100% - 7px) 100%, 0 100%); filter: drop-shadow(0 0 8px rgba(255, 230, 0, 0.45));"
           >
             IA
           </span>
-          <span class="hidden items-center gap-2 sm:inline-flex">
-            <span class="font-['JetBrains_Mono'] text-[0.62rem] uppercase tracking-[0.22em] text-[var(--color-text-subtle)]">
-              [ SYS ]
-            </span>
+          <span class="hidden items-center gap-2.5 sm:inline-flex">
             <span
-              class="font-['Space_Grotesk'] text-[1rem] font-bold uppercase tracking-[0.04em] text-[var(--color-text)]"
+              class="font-['Space_Grotesk'] text-[1rem] font-bold uppercase tracking-[0.08em] text-[var(--color-text)]"
+              style="font-family: var(--font-ui);"
             >
               Ivan Angjelkoski
             </span>
+            <span class="hud-label hidden xl:inline">[SYS.VER_2.04]</span>
           </span>
         </a>
 
@@ -136,15 +135,22 @@ onBeforeUnmount(() => {
               :class="{ 'is-active': activeHash === link.href }"
               :aria-current="activeHash === link.href ? 'page' : undefined"
             >
-              <span class="text-[var(--color-text-subtle)] group-hover:text-[var(--color-accent)]">{{ link.index }}</span>
+              <span class="text-[0.6rem] text-[var(--color-text-subtle)]">{{ link.index }}</span>
               {{ link.label }}
             </a>
           </li>
         </ul>
 
+        <div class="hidden items-center gap-4 xl:flex">
+          <span class="status-badge">
+            <span class="status-dot" aria-hidden="true" />
+            Status: Online
+          </span>
+        </div>
+
         <button
           ref="menuButtonRef"
-          class="inline-flex h-10 w-10 items-center justify-center border border-[var(--color-border-strong)] bg-[var(--color-bg-inset)] text-[var(--color-accent)] lg:hidden"
+          class="chamfer-sm inline-flex h-10 w-10 items-center justify-center border border-[rgba(255,230,0,0.35)] bg-[rgba(255,230,0,0.04)] text-[var(--color-accent)] lg:hidden"
           :aria-expanded="isMenuOpen"
           aria-controls="mobile-menu"
           aria-label="Open navigation menu"
@@ -184,7 +190,7 @@ onBeforeUnmount(() => {
         aria-label="Mobile navigation"
       >
         <button
-          class="absolute inset-0 h-full w-full bg-[rgba(20,20,26,0.5)] backdrop-blur-[2px]"
+          class="absolute inset-0 h-full w-full bg-[rgba(5,5,5,0.78)] backdrop-blur-[3px]"
           aria-label="Close navigation menu"
           @click="closeMenu(true)"
         />
@@ -198,16 +204,19 @@ onBeforeUnmount(() => {
           leave-to-class="translate-y-4 opacity-0"
         >
           <aside
+            v-if="isMenuOpen"
             id="mobile-menu"
             ref="mobileMenuRef"
-            class="absolute left-4 right-4 top-4 border border-[var(--color-border-strong)] bg-[var(--color-bg-panel)] p-5"
-            style="clip-path: polygon(0 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%);"
+            class="chamfer-md panel panel-notch absolute left-4 right-4 top-4 p-5"
+            style="filter: drop-shadow(0 0 26px rgba(255, 230, 0, 0.14));"
             @click.stop
           >
             <div class="mb-4 flex items-center justify-between">
-              <p class="font-['JetBrains_Mono'] text-xs uppercase tracking-[0.22em] text-[var(--color-accent)]">// MENU</p>
+              <p class="font-['JetBrains_Mono'] text-xs font-semibold uppercase tracking-[0.22em] text-[var(--color-accent)]">
+                // MENU
+              </p>
               <button
-                class="inline-flex h-9 w-9 items-center justify-center border border-[var(--color-border-strong)] text-[var(--color-text-muted)]"
+                class="inline-flex h-9 w-9 items-center justify-center border border-[var(--color-border-strong)] text-[var(--color-text-muted)] hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
                 aria-label="Close navigation menu"
                 @click="closeMenu(true)"
               >
@@ -232,14 +241,22 @@ onBeforeUnmount(() => {
               <li v-for="link in navLinks" :key="`mobile-${link.href}`">
                 <a
                   :href="link.href"
-                  class="group flex items-center gap-3 border border-transparent px-4 py-3 font-['JetBrains_Mono'] text-sm font-medium uppercase tracking-[0.14em] text-[var(--color-text-muted)] hover:border-[var(--color-accent)] hover:bg-[rgba(122,98,0,0.08)] hover:text-[var(--color-accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]"
+                  class="group flex items-center gap-3 border border-transparent px-4 py-3 font-['JetBrains_Mono'] text-sm font-medium uppercase tracking-[0.14em] text-[var(--color-text-muted)] hover:border-[rgba(255,230,0,0.4)] hover:bg-[rgba(255,230,0,0.06)] hover:text-[var(--color-accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)]"
                   @click="closeMenu(false)"
                 >
-                  <span class="text-[var(--color-text-subtle)]">{{ link.index }}</span>
+                  <span class="text-[0.68rem] text-[var(--color-text-subtle)]">{{ link.index }}</span>
                   {{ link.label }}
                 </a>
               </li>
             </ul>
+
+            <div class="mt-4 flex items-center justify-between border-t border-dashed border-[var(--color-border-strong)] pt-4">
+              <span class="status-badge">
+                <span class="status-dot" aria-hidden="true" />
+                Status: Online
+              </span>
+              <span class="hud-label">[SYS.VER_2.04]</span>
+            </div>
           </aside>
         </Transition>
       </div>

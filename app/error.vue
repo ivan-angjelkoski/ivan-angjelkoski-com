@@ -9,10 +9,18 @@ const handleHome = () => clearError({ redirect: "/" });
 <template>
   <div class="relative min-h-[100dvh] overflow-x-clip text-[var(--text)]">
     <div class="page-shell mx-auto flex w-full max-w-[1120px] flex-col items-start justify-center gap-8 px-5 py-24 sm:px-8 lg:px-10">
-      <section class="section-shell cyber-bg w-full space-y-7 p-7 sm:p-12">
-        <span class="eyebrow">ERROR // {{ error?.statusCode ?? 404 }}</span>
-        <h1 class="section-title max-w-2xl">
-          {{ error?.statusCode === 404 ? "Page not found." : "System fault." }}
+      <section class="section-shell cyber-bg chamfer-lg w-full space-y-7 p-7 sm:p-12">
+        <div class="flex flex-wrap items-center gap-x-5 gap-y-2">
+          <span class="section-tag">Error // {{ error?.statusCode ?? 404 }}</span>
+          <span class="hud-label">[SYS.FAULT]</span>
+        </div>
+        <h1 class="section-title flicker max-w-2xl">
+          <span
+            class="glitch"
+            :data-text="error?.statusCode === 404 ? 'PAGE NOT FOUND.' : 'SYSTEM FAULT.'"
+          >
+            {{ error?.statusCode === 404 ? "PAGE NOT FOUND." : "SYSTEM FAULT." }}
+          </span>
         </h1>
         <p class="eyebrow-muted">
           {{ error?.statusCode === 404 ? "&gt; the link may be old, mistyped, or moved." : "&gt; an unexpected error interrupted the request." }}
@@ -22,7 +30,7 @@ const handleHome = () => clearError({ redirect: "/" });
         </p>
         <div class="flex flex-col gap-3 sm:flex-row">
           <button type="button" class="btn btn-primary" @click="handleHome">Back to home</button>
-          <a href="#contact" class="btn btn-secondary" @click="handleHome">Get in touch</a>
+          <a href="#contact" class="btn btn-ghost" @click="handleHome">Get in touch</a>
         </div>
       </section>
     </div>
